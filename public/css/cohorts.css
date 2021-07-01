@@ -1,0 +1,105 @@
+.label{
+    
+width: 230px;
+height: 75px;
+left: 372px;
+top: 347px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 64px;
+line-height: 75px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.label_text{
+    width: 1195px;
+height: 164px;
+padding-top: 50px;
+padding-bottom: 130px;
+left: 369px;
+top: 459px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 26px;
+color: #000000;
+}
+.label_first{
+    width: 588px;
+height: 42px;
+left: 368px;
+top: 714px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 42px;
+
+color: #000000;
+}
+
+.label_second{
+    width: 588px;
+height: 42px;
+left: 368px;
+top: 714px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 42px;
+
+color: #000000;
+}
+.officers{
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 42px;
+
+color: #465072;
+
+}
+
+.card-title{
+    border-right: 2px solid #C4C4C4;
+    border-left:  2px solid #C4C4C4;
+    border-bottom:  2px solid #C4C4C4;
+    font-family: Roboto;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
+.item_card{
+    width: 18%;
+}
+
+@media(max-width: 768px){
+    .item_card{   
+       width: 25%;
+    }
+}
+
+@media(max-width: 520px){
+    .item_card{   
+       width: 100%;
+    }
+}
+/* @media (max-width: 320px){
+.item_card {
+    width: 100%;
+}
+} */

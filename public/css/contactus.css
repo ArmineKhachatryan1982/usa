@@ -1,0 +1,44 @@
+.info_map{
+    padding: 10%;
+}
+.map-side{
+    width: 360px;
+    /*height: 300px;*/
+}
+.info_side>h1{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    /*font-size: ;*/
+    line-height: 56px;
+    font-size:3vw!important;
+}
+
+.btn_send{
+    background: #FFC600;
+    color: white;
+    width: 121px;
+    height: 40px;
+}
+input.invalid{
+    /*border: 1px solid red;*/
+}
+.error_hint{
+    color:red;
+}
+.container{
+    /*border:1px solid red;*/
+}
+.info_side,.map-side{
+    /*border:1px solid blue*/
+}
+..map-side
+.hidden{
+    display: none;
+}
+@media(max-width:900px){
+    .info_side>h1{
+        font-size:28px!important;
+    }
+}
+
