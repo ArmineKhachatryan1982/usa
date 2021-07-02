@@ -50,6 +50,6 @@ Route::get('/admin/adminhomepageshow',[HomepageshowController::class,'index'])->
 Route::post('/admin/adminhomepageshow',[HomepageshowController::class,'store'])->name('homepageshow.store');
 Route::get('/admin/tableupdatedelete',[AdminhomepageupdateController::class,'index'])->name('tableupdatedelete');
 Route::get('/admin/edithomepage/{homepageid}',[AdminhomepageupdateController::class,'show'])->name('edithomepagecreate');
-
+Route::post('/admin/edithomepage',[AdminhomepageupdateController::class,'update'])->name('updatehomepage');
 
 
