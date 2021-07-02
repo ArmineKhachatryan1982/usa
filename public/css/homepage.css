@@ -125,6 +125,8 @@ button{
 
 .partnerses{
     margin:0 auto;
+    width:85%;
+    /*outline:1px solid red;*/
 }
 .partners{
     height:180px;
@@ -142,11 +144,14 @@ button{
     height:100%;
 }
 .partner_text{
-    width: 240px;
+    width: 300px;
     height:160px;
     font-size:12px;
     overflow:hidden;
     color: #253A5C;
+}
+.partner_text>p{
+    height:85px;
 }
 @media(max-width:1210px){
     .news_events{

@@ -45,9 +45,9 @@
     </div>
     </div>
     <div class="header_second">
-        <div class="container ">
+        <div class="container" style="border:1px solid red">
             <div class="d-flex justify-content-center">
-                <nav class="navbar navbar-expand-lg navbar-light  navbar_nav">
+                <nav class="navbar navbar-expand-lg navbar-light  navbar_nav" style="border:1px solid green">
                     <div>
                         <!-- <a class="navbar-brand" href="#">Navbar</a> -->
                         <button class="navbar-toggler text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,37 +55,35 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active text-white  me-4" aria-current="page" href="{{ route('news') }}">News</a>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ route('about') }}">About</a>
                                 </li>
-                                <li class="nav-item me-4">
-                                    <a class="nav-link text-white" href="{{ route('partners')}}">Partners</a>
-                                </li>
-                                <li class="nav-item dropdown me-4">
-                                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        About Us
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item text-white" href="{{ route('about') }}">About</a></li>
-                                        <li><a class="dropdown-item text-white" href="{{ route('contact') }}">Contacts</a></li>
-                                        <li><a class="dropdown-item text-white" href="#">Our Affiliates</a></li>
-                                    </ul>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ route('partners')}}">Our Partners</a>
                                 </li>
 
-                                <li class="nav-item me-4">
-                                    <a class="nav-link text-white" href="{{ route('courses') }}">Courses</a>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ route('training') }}">Training Programs</a>
                                 </li>
-                                <li class="nav-item me-4">
-                                    <a class="nav-link text-white" href="#">Coorts</a>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ route('news') }}">News & Media</a>
                                 </li>
-                                <li class="nav-item me-4">
-                                    <a class="nav-link text-white" href="#">Alumni Association</a>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ route('cohorts') }}">Cohorts</a>
                                 </li>
-                                <li class="nav-item me-4">
-                                    <a class="nav-link text-white" href="#">Steering Committee</a>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ route('steering') }}">Steering Committee</a>
                                 </li>
-                                <li class="nav-item me-4">
-                                    <a class="nav-link text-white" href="{{ route('contactus') }}">Contacts</a>
+
+
+
+
+
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ route('alumni') }}">Alumni Association</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ route('contactus') }}">Contacts Us</a>
                                 </li>
 
                             </ul>
@@ -111,8 +109,8 @@
                 <div class="d-flex  flex-wrap justify-content-center footer_news">
                     <div class="py-5  footer_item">
                         <h2 class="mt-3">LOGO</h2>
-                        <div class="d-flex flex-wrap footer_all" >
-                            <div class="mt-5 w-50 text-justify footer_contact_news">
+                        <div class="d-flex flex-wrap justify-content-center footer_all" >
+                            <div class="mt-5  text-justify footer_contact_news ">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis fermentum lectus. Curabitur vehicula tellus in enim tempor, at congue dui tempor. Proin efficitur eros ultricies ex venenatis varius. Etiam erat ante, consequat ut malesuada quis, condimentum id turpis. Pellentesque in sollicitudin sem. Nunc et mattis est, nec fringilla lacus. Vivamus sodales nunc nec nunc mollis volutpat. Fusce finibus tortor id lectus ultrices, ac fringilla risus dictum. Donec scelerisque nibh eget ipsum iaculis iaculis.
                             </div>
                             <div class="mx-5 footer_contact_news">
@@ -125,11 +123,11 @@
                                 <a href="#" class="d-block p-1 text-white">Steering Committee </a>
                                 <a href="#" class="d-block p-1 text-white">Contacts </a>
                             </div>
-                            <div class="d-flex flex-column align-items-center footer_contact_news">
-                                <h4>Follow US</h4>
-                                <a href="#" class="p-1  text-white"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="p-1  text-white"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="p-1  text-white"><i class="fa fa-instagram"></i></a>
+                            <div class="d-flex flex-column mt-4  footer_contact_news">
+
+                                <a href="#" class="p-1  text-white"><i class="fa fa-phone mr-3"></i>875-856-856</a>
+                                <a href="#" class="p-1  text-white"><i class="fa fa-envelope mr-3"></i>example@gmail.com</a>
+
                             </div>
                         </div>
                     </div>

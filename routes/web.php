@@ -9,7 +9,9 @@ use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\PartnersController;
 use App\Http\Controllers\CohortsController;
 use App\Http\Controllers\Courses4Controller;
-
+use App\Http\Controllers\AluminiassciationController;
+use App\Http\Controllers\SteeringcommitteeController;
+use App\Http\Controllers\TrainingController;
 
 
 
@@ -41,6 +43,10 @@ Route::get('/contactus',[ContactusController::class,'index'])->name('contactus')
 Route::get('/partners',[PartnersController::class,'index'])->name('partners');
 Route::get('/cohorts',[CohortsController::class,'index']);
 Route::get('/courses4',[Courses4Controller::class,'index'])->name('courses');
+Route::get('/alumini',[AluminiassciationController::class,'index'])->name('alumni');
+Route::get('/steeringcommittee',[SteeringcommitteeController::class,'index'])->name('steering');
+Route::get('/cohorts',[CohortsController::class,'index'])->name('')->name('cohorts');
+Route::get('/trainingprograam',[TrainingController::class,'index'])->name('training');
 
 
 
