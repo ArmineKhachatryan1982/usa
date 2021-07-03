@@ -15,12 +15,12 @@ class CreateAboutUsesTable extends Migration
     {
         Schema::create('about_uses', function (Blueprint $table) {
             $table->id()->from(1000);
-            $table->string('paragraph_one_en');
-            $table->string('paragraph_one_am');
-            $table->string('paragraph_two_en');
-            $table->string('paragraph_two_am');
-            $table->string('paragraph_tree_en');
-            $table->string('paragraph_tree_am');
+            $table->longText('paragraph_one_en');
+            $table->longText('paragraph_one_am');
+            $table->longText('paragraph_two_en');
+            $table->longText('paragraph_two_am');
+            $table->longText('paragraph_tree_en');
+            $table->longText('paragraph_tree_am');
             $table->timestamps();
         });
     }
