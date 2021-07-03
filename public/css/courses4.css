@@ -1,46 +1,231 @@
-/* .course_first{
-    position: absolute;
-}
-.courses_text{
-    position: absolute;
-    top: 20%;
-    height: 60%;
-    width: 60%;
-    border: 1px solid red;
-    left: 50%;
-    color: white;
-    transform: translate(-50%, 0 );
-background: linear-gradient(90deg, #253A5C 2.93%, #253A5C 56.85%, rgba(196, 196, 196, 0) 103.95%);
-}
-.courses_text>p{
-    font-size: 26px !important;
-    padding: 37px;
-} */
+
 .startap_image{
     z-index: -1;
     position: absolute;
 }
 .gradient_area{
+    margin: 20px 0 0 70px;
     z-index: 1;
     position: relative;
     background: linear-gradient(90deg, #253A5C 2.93%, #253A5C 56.85%, rgba(196, 196, 196, 0) 103.95%);
-    height: 280px;
+    top: 100px;
+    height: 250px;
     padding: 3%;
 }
 .gradient_text{
-font-style: normal;
-font-weight: 600;
-font-size: 41px;
-line-height: 42px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 46px;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
-.course_first{
-    border:2px solid blue;
-    width:1000px;
-    height:300px;
-    background-size:cover;
+
+#course_first{
+    /* border:2px solid blue; */
+    width:100%;
+    height:514px;
+    background: url('../img/img_courses4/startup-594090_1920 1.png');
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
+
+.about_courseOne{
+    margin: 6% 0 10% 0;
+    /* border:1px solid red */
+}
+
+.about_courseOneText{
+    width: 600px;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 23px;
+    line-height:28.13px;
+    padding-left: 30px;
+
+}
+.course_image{
+    /* border: 1px solid fuchsia; */
+    z-index: 0;
+}
+.text_image{
+    width: 579px;
+    margin-top: -150px;
+    height: 150px;
+    /* border: 1px solid greenyellow; */
+    z-index: 1;
+    background: linear-gradient(90deg, #253A5C 2.93%, #253A5C 56.85%, rgba(196, 196, 196, 0) 103.95%);
+    opacity: 0.8;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    padding: 25px;
+    color: white;
+}
+.with_image{
+    padding: 50px 0 50px 0;
+    background: url(../img/img_courses4/—Pngtree—beautiful\ cube\ pattern\ batik_3633077\ 1.png);
+    background-color: #253A5C;
+    color: white;
+}
+
+
+.about_courseOneText>h1{
+    font-weight: 900;
+}
+
+
+@media (max-width: 1273px) {
+    .text_image {
+        width: 460px;
+        font-size: 44px;
+    }
+    .image_size{
+        width: 460px;
+    }
+    .about_courseOneText{
+        font-size: 20px;
+        line-height: 25.13px;
+    }
+
+}
+@media (max-width: 1200px) {
+    .course_image {
+        margin: auto;
+    }
+    .about_courseOneText{
+        text-align: center;
+    }
+    .about_courseOne{
+        flex-flow: column;
+        margin: 20px auto;
+    }
+
+    .nkar_text {
+        flex-flow: column-reverse;
+
+        margin: auto;
+    }
+    .nkar_text>div{
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 993px) {
+    .gradient_text {
+        font-size: 24px;
+        line-height: 43px;
+    }
+
+}
+@media (max-width: 874px) {
+    .nkar_text {
+        flex-flow: column-reverse;
+
+        margin: auto;
+    }
+    .nkar_text>div{
+        margin: auto;
+    }
+
+}
+@media (max-width: 860px) {
+    .text_image {
+        width: 400px;
+        font-size: 40px;
+    }
+    .image_size{
+        width: 460px;
+    }
+    .about_courseOneText{
+        font-size: 22px;
+        line-height: 25.13px;
+        padding: 55px;
+    }
+    .nkar_text>div{
+        margin:auto
+    }
+
+}
+@media (max-width: 769px) {
+    .gradient_text {
+        font-size: 20px;
+        line-height: 37px;
+    }
+
+}
+/* @media (max-width: 765px) {
+    .gradient_text {
+        font-size: 19px;
+        line-height: 32px;
+    }
+    .nkar_text {
+        flex-flow: column-reverse;
+
+        margin: auto;
+    }
+    .nkar_text>div{
+        margin: auto;
+    }
+    .text_image {
+        width: 400px;
+        font-size: 40px;
+    }
+    .image_size{
+        width: 460px;
+    }
+    .about_courseOneText{
+        font-size: 22px;
+        line-height: 25.13px;
+        padding: 55px;
+    }
+    .nkar_text>div{
+        margin:auto;
+        padding: 0;
+    }
+
+} */
+/* @media (max-width: 700px) {
+    .gradient_text {
+        font-size: 19px;
+        line-height: 32px;
+    }
+    .nkar_text {
+        flex-flow: column-reverse;
+
+        margin: auto;
+    }
+    .nkar_text>div{
+        margin: auto;
+    }
+
+} */
+
+@media (max-width: 540px) {
+    #section_index {
+        width: 615px;
+    }
+
+}
+@media (max-width: 414px) {
+    #section_index {
+        width: 615px;
+    }
+    .about_courseOneText{
+        font-size: 34px;
+        line-height: 37.13px;
+    }
+
+}
+
+@media (max-width: 360px) {
+    #section_index {
+        width: 615px;
+    }
+
+}

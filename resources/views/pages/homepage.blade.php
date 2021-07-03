@@ -197,7 +197,7 @@
     <section class = "home_fifth">
         <div class="d-flex flex-column  justify-content-center align-items-center container">
             <h2 class="m-3">Our Partners</h2>
-            <div class="d-flex flex-wrap justify-content-center w-75  partnerses">
+            <div class="d-flex flex-wrap justify-content-center   partnerses">
                 <div class="d-flex  align-items-center m-1 partners">
                     <div class = "partner_img">
                         <img src="img/img_home/image 20.png">
