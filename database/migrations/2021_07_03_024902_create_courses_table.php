@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoortsTable extends Migration
+class CreateCoursesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCoortsTable extends Migration
      */
     public function up()
     {
-        Schema::create('coorts', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->id()->from(1000);
-            $table->string('text_en');
-            $table->string('text_am');
+            $table->string('img_index');
+            $table->longText('text_index');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateCoortsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coorts');
+        Schema::dropIfExists('courses');
     }
 }

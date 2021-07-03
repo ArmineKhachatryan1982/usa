@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePartnersTable extends Migration
+class CreateCohortTitlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreatePartnersTable extends Migration
      */
     public function up()
     {
-        Schema::create('partners', function (Blueprint $table) {
+        Schema::create('cohort_titles', function (Blueprint $table) {
             $table->id()->from(1000);
+            $table->bigInteger('cohort_infos_id')->unsigned();
+            $table->foreign('cohort_infos_id')->references('id')->on('cohort_infos')->onDelete('cascade')->onUpdate('cascade');
+            $table->longText('date_text_en');
+            $table->longText('date_text_am');
             $table->string('title_en');
             $table->string('title_am');
-            $table->longText('text_en');
-            $table->longText('text_am');
-            $table->string('img');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreatePartnersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('partners');
+        Schema::dropIfExists('cohort_titles');
     }
 }

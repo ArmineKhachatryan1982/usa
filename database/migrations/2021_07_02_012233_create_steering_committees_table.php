@@ -17,10 +17,10 @@ class CreateSteeringCommitteesTable extends Migration
             $table->id()->from(1000);
             $table->string('title_en');
             $table->string('title_am');
-            $table->string('paragraph_one_en');
-            $table->string('paragraph_one_am');
-            $table->string('paragraph_two_en');
-            $table->string('paragraph_two_am');
+            $table->longText('paragraph_one_en');
+            $table->longText('paragraph_one_am');
+            $table->longText('paragraph_two_en');
+            $table->longText('paragraph_two_am');
             $table->timestamps();
         });
     }
