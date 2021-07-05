@@ -34,6 +34,15 @@ use App\Http\Controllers\AdminhomepageupdateController;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+
+Route::get('/', function () {
+    
+
+          return redirect('/'.app()->getLocale());
+      });
+
+Route::prefix('{locale?}')->name('locale.')->group(function (){
+
 Route::get('/',[HomepageController::class,'index']);
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 
@@ -47,6 +56,7 @@ Route::get('/alumini',[AluminiassciationController::class,'index'])->name('alumn
 Route::get('/steeringcommittee',[SteeringcommitteeController::class,'index'])->name('steering');
 Route::get('/cohorts',[CohortsController::class,'index'])->name('')->name('cohorts');
 Route::get('/trainingprograam',[TrainingController::class,'index'])->name('training');
+});
 
 
 

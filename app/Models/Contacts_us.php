@@ -9,6 +9,6 @@ class Contacts_us extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'map_url'
+        'map_url','title_page_en','title_page_am'
     ];
 }
