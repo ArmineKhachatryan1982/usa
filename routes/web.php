@@ -35,9 +35,12 @@ use App\Http\Controllers\AdminhomepageupdateController;
 //    return view('welcome');
 //});
 
-Route::get('/', function () {
-    
+Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// url run defult lang 
+Route::get('/', function () {
           return redirect('/'.app()->getLocale());
       });
 
@@ -56,9 +59,12 @@ Route::get('/alumini',[AluminiassciationController::class,'index'])->name('alumn
 Route::get('/steeringcommittee',[SteeringcommitteeController::class,'index'])->name('steering');
 Route::get('/cohorts',[CohortsController::class,'index'])->name('')->name('cohorts');
 Route::get('/trainingprograam',[TrainingController::class,'index'])->name('training');
+
 });
 
 
+// role and prmishen  middleware
+Route::group(['middleware' => ['auth']], function() {
 
 Route::get('/admin/adminhomepage',[AdminhomepageController::class,'index']);
 
@@ -68,4 +74,7 @@ Route::get('/admin/tableupdatedelete',[AdminhomepageupdateController::class,'ind
 Route::get('/admin/edithomepage/{homepageid}',[AdminhomepageupdateController::class,'show'])->name('edithomepagecreate');
 
 
+
+
+});
 
