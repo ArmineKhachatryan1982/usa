@@ -15,7 +15,9 @@ class CreateContactsUsesTable extends Migration
     {
         Schema::create('contacts_uses', function (Blueprint $table) {
             $table->id()->from(1000);
-            $table->string('map_url');
+            $table->longText('map_url');
+            $table->string('title_page_en')->nullable();
+            $table->string('title_page_am')->nullable();
             $table->timestamps();
         });
     }

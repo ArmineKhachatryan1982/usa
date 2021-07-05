@@ -20,7 +20,7 @@
     <!-- slide-link end -->
 
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @yield('styles')
 
 </head>
@@ -32,12 +32,12 @@
                 <h2 class="text-white">LOGO</h2>
                 <div class="d-flex lang">
                     <ul class="d-flex" >
-                        <li class="d-inline p-2"><a href="#" class=" text-white">ARM</a></li>
-                        <li class="d-inline p-2"><a href="#" class=" text-white">ENG</a></li>
+                        <li class="d-inline p-2"><a href="{{ asset('/') }}{{request()->path()}}" class=" text-white">ARM</a></li>
+                        <li class="d-inline p-2"><a href="{{ asset('/') }}{{request()->path()}}" class=" text-white">ENG</a></li>
                     </ul>
                     <div class="search_div">
                         <input class="form-control " type="search"  aria-label="Search">
-                        <img class="p-1" src="img/img_footer/Vector.jpg">
+                        <img class="p-1" src="{{ asset('img/img_footer/Vector.jpg') }}">
                     </div>
                 </div>
             </div>
@@ -53,37 +53,34 @@
                         <button class="navbar-toggler text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon text-white"></span>
                         </button>
+
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
+                               
                                 <li class="nav-item me-3">
-                                    <a class="nav-link text-white" href="{{ route('about') }}">About</a>
+                                    <a class="nav-link text-white" href="{{ asset( app()->getLocale().'/aboutus') }}">@lang('main.about_us')</a>
                                 </li>
                                 <li class="nav-item me-3">
-                                    <a class="nav-link text-white" href="{{ route('partners')}}">Our Partners</a>
-                                </li>
-
-                                <li class="nav-item me-3">
-                                    <a class="nav-link text-white" href="{{ route('training') }}">Training Programs</a>
-                                </li>
-                                <li class="nav-item me-3">
-                                    <a class="nav-link text-white" href="{{ route('news') }}">News & Media</a>
-                                </li>
-                                <li class="nav-item me-3">
-                                    <a class="nav-link text-white" href="{{ route('cohorts') }}">Cohorts</a>
-                                </li>
-                                <li class="nav-item me-3">
-                                    <a class="nav-link text-white" href="{{ route('steering') }}">Steering Committee</a>
+                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/partners') }}">Our Partners</a>
                                 </li>
 
-
-
-
-
                                 <li class="nav-item me-3">
-                                    <a class="nav-link text-white" href="{{ route('alumni') }}">Alumni Association</a>
+                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/training') }}">Training Programs</a>
                                 </li>
                                 <li class="nav-item me-3">
-                                    <a class="nav-link text-white" href="{{ route('contactus') }}">Contacts Us</a>
+                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/news') }}">News & Media</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/cohorts') }}">Cohorts</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/steering') }}">Steering Committee</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/alumni') }}">Alumni Association</a>
+                                </li>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/contactus') }}">Contacts Us</a>
                                 </li>
 
                             </ul>
@@ -114,14 +111,14 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis fermentum lectus. Curabitur vehicula tellus in enim tempor, at congue dui tempor. Proin efficitur eros ultricies ex venenatis varius. Etiam erat ante, consequat ut malesuada quis, condimentum id turpis. Pellentesque in sollicitudin sem. Nunc et mattis est, nec fringilla lacus. Vivamus sodales nunc nec nunc mollis volutpat. Fusce finibus tortor id lectus ultrices, ac fringilla risus dictum. Donec scelerisque nibh eget ipsum iaculis iaculis.
                             </div>
                             <div class="mx-5 footer_contact_news">
-                                <h4>Navigation</h4>
-                                <a href="#" class="d-block p-1 text-white">Home</a>
-                                <a href="#" class="d-block p-1 text-white">About Us</a>
-                                <a href="#" class="d-block p-1 text-white">Courses</a>
-                                <a href="#" class="d-block p-1 text-white">Coorts</a>
-                                <a href="#" class="d-block p-1 text-white">Alumni Association</a>
-                                <a href="#" class="d-block p-1 text-white">Steering Committee </a>
-                                <a href="#" class="d-block p-1 text-white">Contacts </a>
+                                <h4>@lang('main.navigation')</h4>
+                                <a href="{{ asset(app()->getLocale().'/') }}" class="d-block p-1 text-white">@lang('main.home')</a>
+                                <a href="{{ asset( app()->getLocale().'/aboutus') }}" class="d-block p-1 text-white">@lang('main.about_us')</a>
+                                <a href="#" class="d-block p-1 text-white">@lang('main.courses')</a>
+                                <a href="#" class="d-block p-1 text-white">@lang('main.coorts')</a>
+                                <a href="#" class="d-block p-1 text-white">@lang('main.alumni_association')</a>
+                                <a href="#" class="d-block p-1 text-white">@lang('main.steering_committee') </a>
+                                <a href="#" class="d-block p-1 text-white">@lang('main.contacts') </a>
                             </div>
                             <div class="d-flex flex-column mt-4  footer_contact_news">
 

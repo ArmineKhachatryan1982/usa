@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Contacts_us;
 
 use Illuminate\Http\Request;
 
@@ -11,9 +12,11 @@ class ContactusController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($locale)
     {
-        return view('pages.contactus');
+         app()->setLocale($locale);
+        $data=Contacts_us::where('id','1')->first();
+        return view('pages.contactus',['data'=>$data]);
     }
 
     /**

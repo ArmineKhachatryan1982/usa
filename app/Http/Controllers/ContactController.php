@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Contracts_us;
 
 class ContactController extends Controller
 {
@@ -13,7 +14,12 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('pages.contact');
+
+
+        echo $data=Contracts_us::where('id','1')->first();
+
+        $data ="1";
+        return view('pages.contactus',['data'=>data]);
 
     }
 
