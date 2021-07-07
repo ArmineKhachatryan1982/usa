@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('styles')
-    <link rel="stylesheet" href="css/courses4.css">
+    <link rel="stylesheet" href="{{ asset('css/courses4.css') }}">
 @endsection
 
 @section('content')
@@ -34,7 +34,7 @@
                 <div class="d-flex flex-wrap container all_cours">
                     <div class=" d-flex about_courseOne">
                         <div class="order-1 course_image">
-                            <img class="image_size" src="img/img_courses4/meeting-1245776_1920 1.png" alt="">
+                            <img class="image_size" src="{{ asset('img/img_courses4/meeting-1245776_1920 1.png') }}" alt="">
                             <div class="text_image">
                                 Course name, lorem ipsum dolor sit
                             </div>
@@ -75,7 +75,7 @@
                 <div class="d-flex flex-wrap container all_cours">
                     <div class=" d-flex nkar_text " >
                         <div class=" order-2">
-                            <img class=" image_size" src="img/img_courses4/work-5382501_1920 1.png " alt="">
+                            <img class=" image_size" src="{{ asset('img/img_courses4/work-5382501_1920 1.png') }} " alt="">
                             <div class="text_image">
                                 Course name, lorem ipsum dolor sit
                             </div>
@@ -116,7 +116,7 @@
                 <div class="d-flex flex-wrap container all_cours">
                     <div class=" d-flex about_courseOne">
                         <div class="course_image"><img class="image_size"
-                                                       src="img/img_courses4/people-discussion-5069845_1920 1.png" alt="">
+                                                       src="{{ asset('img/img_courses4/people-discussion-5069845_1920 1.png') }}" alt="">
                             <div class="text_image">
                                 Course name, lorem ipsum dolor sit
                             </div>

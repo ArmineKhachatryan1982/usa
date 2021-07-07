@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('styles')
-    <link rel="stylesheet" href="css/AlumniAssociation.css">
+    <link rel="stylesheet" href="{{ asset('css/AlumniAssociation.css') }}">
 @endsection
 
 @section('content')
@@ -45,40 +45,40 @@
             <div class="all_img">
                 <div class="row image_row justify-content-center ">
                     <div class=" col-lg-4 col-md-6 col-ms-12 image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12   image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_alumini/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_alumini/Rectangle 54.jpg') }}" alt="">
                     </div>
 
 

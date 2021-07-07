@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('styles')
-    <link rel="stylesheet" href="css/cohorts.css">
+    <link rel="stylesheet" href="{{ asset('css/cohorts.css') }}">
 @endsection
 @section('content')
     <section id="section_index">
@@ -32,7 +32,7 @@
             <div class="row all_cards d-flex flex-wrap justify-content-between">
                 <div class=" item_card ">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 29.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 29.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3  py-0"> Lorem ipsum dolor sit </h5>
@@ -40,7 +40,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 30.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 30.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -48,7 +48,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 31.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 31.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="  text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 32.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 32.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -65,7 +65,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 33.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 33.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -73,7 +73,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 34.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 34.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -81,7 +81,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 35.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 35.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -89,7 +89,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 36.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 36.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -97,7 +97,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 37.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 37.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="  text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -105,7 +105,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 38.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 38.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -113,7 +113,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 39.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 39.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="  text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -121,7 +121,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 40.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 40.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -129,7 +129,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 41.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 41.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -137,7 +137,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 42.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 42.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -145,7 +145,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 43.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 43.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -169,7 +169,7 @@
             <div class="row all_cards d-flex flex-wrap justify-content-between">
                 <div class=" item_card ">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 44.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 44.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3  py-0"> Lorem ipsum dolor sit </h5>
@@ -177,7 +177,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 45.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 45.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -185,7 +185,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 46.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 46.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="  text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -193,7 +193,7 @@
                 </div>
                 <div class="item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 47.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 47.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -202,7 +202,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 48.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 48.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -210,7 +210,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 49.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 49.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -218,7 +218,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 50.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 50.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -226,7 +226,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 51.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 51.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -234,7 +234,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 52.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 52.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class="  text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>
@@ -242,7 +242,7 @@
                 </div>
                 <div class=" item_card">
                     <div>
-                        <img class="card-img-top" src="img/img_cohort/image 53.png" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('img/img_cohort/image 53.png') }}" alt="Card image cap">
                     </div>
                     <div class="card-title">
                         <h5 class=" text-center  px-3 py-0"> Lorem ipsum dolor sit </h5>

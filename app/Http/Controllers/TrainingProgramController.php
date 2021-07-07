@@ -3,24 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Contracts_us;
 
-class ContactController extends Controller
+class TrainingProgramController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($locale)
     {
-
-
-        echo $data=Contracts_us::where('id','1')->first();
-
-        $data ="1";
-        return view('pages.contactus',['data'=>data]);
-
+        app()->setLocale($locale);
+        return view('pages.training_program');
     }
 
     /**

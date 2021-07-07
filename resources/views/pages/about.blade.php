@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-<link rel="stylesheet" href="css/aboutus.css">
+<link rel="stylesheet" href="{{ asset('css/aboutus.css') }}">
 @section('content')
     <section class="aboutus_first">
         <div class = "d-flex flex-wrap py-5 container aboutus">

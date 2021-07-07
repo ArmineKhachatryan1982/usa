@@ -420,10 +420,10 @@
 <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
 <!-- nice scroll -->
 <script src="{{ asset('admin/js/jquery.scrollTo.min.js') }}"></script>
-<script src="{{ asset('admin/js/jquery.nicescroll.js" type="text/javascript') }}"></script>
+<script src="{{ asset('admin/js/jquery.nicescroll.js ') }}"type="text/javascript"></script>
 <!-- charts scripts -->
 <script src="{{ asset('admin/assets/jquery-knob/js/jquery.knob.js') }}"></script>
-<script src="{{ asset('admin/js/jquery.sparkline.js" type="text/javascript') }}"></script>
+<script src="{{ asset('admin/js/jquery.sparkline.js') }}"type="text/javascript"></script>
 <script src="{{ asset('admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js') }}"></script>
 <script src="{{ asset('admin/js/owl.carousel.js') }}"></script>
 <!-- jQuery full calendar -->
@@ -432,7 +432,7 @@
 <script src="{{ asset('admin/assets/fullcalendar/fullcalendar/fullcalendar.js') }}"></script>
 <!--script for this page only-->
 <script src="{{ asset('admin/js/calendar-custom.js') }}"></script>
-<script src=}{{ asset('admin/js/jquery.rateit.min.js') }}"></script>
+<script src="{{ asset('admin/js/jquery.rateit.min.js') }}"></script>
 <!-- custom select -->
 <script src="{{ asset('admin/js/jquery.customSelect.min.j') }}s"></script>
 <script src="{{ asset('admin/assets/chart-master/Chart.js') }}"></script>
