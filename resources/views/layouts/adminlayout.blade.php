@@ -368,6 +368,38 @@
                         <li><a class="" href="basic_table.html">Basic Table</a></li>
                     </ul>
                 </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+
+                        <span>Cohorts</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="">C updatetable</a></li>
+{{--                        <li><a class="" href="">C img update</a></li>--}}
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+
+                        <span>Steering Commitee</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="{{route('admin_Steering_Committee')}}">SC updatetable</a></li>
+{{--                        <li><a class="" href="">SC img update</a></li>--}}
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+
+                        <span>Alumni Association</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="{{route('admin_Alumni_Association')}}">AA updatetable</a></li>
+                    </ul>
+                </li>
 
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
@@ -382,7 +414,8 @@
                         <li><a class="" href="blank.html">Blank Page</a></li>
                         <li><a class="" href="{{ route('tableupdatedelete') }}">Home page edit data</a></li>
                         <li><a class="" href="{{ route('adminhomepageshow') }}">Home page insert data</a></li>
-                        <li><a class="" href="404.html">404 Error</a></li>s
+                        <li><a class="" href="">Alumni Association </a></li>
+                        <li><a class="" href="404.html">404 Error</a></li>
                     </ul>
                 </li>
 

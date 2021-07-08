@@ -1,23 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Steering_committee;
-use App\Models\Steering_img;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class SteeringcommitteeController extends Controller
+use Illuminate\Http\Request;
+
+class SteeringCommitteeImageUploadController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($locale)
+    public function index()
     {
-        app()->setLocale($locale);
-        $steerings=DB::table('steering_committees')->get();
-        return view('pages.steering_committee',compact('steerings'));
+        //
     }
 
     /**

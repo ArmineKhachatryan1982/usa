@@ -1,23 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Steering_committee;
-use App\Models\Steering_img;
+
+use App\Models\Alumni_association;
+use App\Models\Alumni_association_img;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class SteeringcommitteeController extends Controller
+class AlumniAssociationUpdateController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($locale)
+    public function index()
+
     {
-        app()->setLocale($locale);
-        $steerings=DB::table('steering_committees')->get();
-        return view('pages.steering_committee',compact('steerings'));
+        $alumnis = DB::table('alumni_associations')->get();
+
+        return view('admin.alumni_association',compact('alumnis'));
     }
 
     /**
@@ -27,7 +29,7 @@ class SteeringcommitteeController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -49,7 +51,8 @@ class SteeringcommitteeController extends Controller
      */
     public function show($id)
     {
-        //
+        $alumnis = DB::table('alumni_associations')->get();
+        return view('admin.alumni_association_edit',compact('alumnis'));
     }
 
     /**
@@ -60,7 +63,7 @@ class SteeringcommitteeController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -70,9 +73,20 @@ class SteeringcommitteeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+       $id = $request -> input('id');
+       $title_en = $request -> input('title_en');
+       $title_am = $request -> input('title_am');
+       $text_one_en = $request -> input('text_one_en');
+       $text_one_am = $request -> input('text_one_am');
+       $text_two_en = $request -> input('text_two_en');
+       $text_two_am = $request -> input('text_two_am');
+       $updateAlumni=DB::table('alumni_associations')
+                        ->where('id',$id)
+                        ->update(['title_en'=>$title_en,'title_am'=>$title_am,'text_one_en'=>$text_one_en,'text_one_am'=>$text_one_am,'text_two_en'=>$text_two_en,'text_two_am'=>$text_two_am]);
+
+        return redirect()->back()->with('success','Updated one record');
     }
 
     /**
