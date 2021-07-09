@@ -11,8 +11,9 @@ class HomepageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($locale)
     {
+        app()->setLocale($locale);
         return view('pages.homepage');
     }
 

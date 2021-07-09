@@ -1,10 +1,10 @@
 @extends('layouts.layout')
 @section('styles')
-    <link rel="stylesheet" href="css/news1.css">
+    <link rel="stylesheet" href="{{ asset('css/news1.css') }}">
 @endsection
 @section('content')
     <!-- enter main section content-->
-    <img src="img/img_news1/graphical-modern-digital-world-news-background_1412-114 2.png" class="img-fluid"
+    <img src="{{ asset('img/img_news1/graphical-modern-digital-world-news-background_1412-114 2.png') }}" class="img-fluid"
          alt="Responsive image">
     <div class="container">
         <h1 class="p-4 ">Lorem ipsum dolor sit</h1>
@@ -61,7 +61,7 @@
                                     <div class="calendar_style">
                                         <p class="calendar">25 March, 2021</p>
                                     </div>
-                                    <img class="card-img-top" src="img/img_news1/image 9.png" alt="Card image cap">
+                                    <img class="card-img-top" src="{{ asset('img/img_news1/image 9.png') }}" alt="Card image cap">
                                 </div>
                                 <div class="col-sm-12">
                                     <h5 class="card-title"> Lorem ipsum dolor sit </h5>
@@ -89,7 +89,7 @@
                                     <div class="calendar_style">
                                         <p class="calendar">25 March, 2021</p>
                                     </div>
-                                    <img class="card-img-top" src="img/img_news1/image 9.png" alt="Card image cap">
+                                    <img class="card-img-top" src="{{ asset('img/img_news1/image 9.png') }}" alt="Card image cap">
                                 </div>
                                 <div class="col-sm-12">
                                     <h5 class="card-title"> Lorem ipsum dolor sit </h5>
@@ -117,7 +117,7 @@
                                     <div class="calendar_style">
                                         <p class="calendar">25 March, 2021</p>
                                     </div>
-                                    <img class="card-img-top" src="img/img_news1/image 9.png" alt="Card image cap">
+                                    <img class="card-img-top" src="{{ asset('img/img_news1/image 9.png') }}" alt="Card image cap">
                                 </div>
                                 <div class="col-sm-12">
                                     <h5 class="card-title"> Lorem ipsum dolor sit </h5>

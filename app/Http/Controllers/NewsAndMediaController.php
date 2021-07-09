@@ -4,16 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PartnersController extends Controller
+class NewsAndMediaController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($locale)
     {
-        return view('pages.partners');
+        app()->setLocale($locale);
+
+        return view('pages.news_&_media');
     }
 
     /**

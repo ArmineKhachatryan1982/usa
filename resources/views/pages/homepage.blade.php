@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('styles')
-    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
 @endsection
 @section('content')
 
@@ -35,7 +35,7 @@
 
                 <div class = "mt-4 event">
                     <div class="news_img">
-                        <img src="img\img_home\image 9.png">
+                        <img src="{{ asset('img\img_home\image 9.png') }}">
                     </div>
                     <div >
                         <h5 class="p-2">Lorem ipsum dolor sit </h5>
@@ -51,7 +51,7 @@
                 </div>
                 <div class = "mt-4 event">
                     <div class="news_img">
-                        <img src="img\img_home\image 9.png">
+                        <img src="{{ asset('img\img_home\image 9.png') }}">
                     </div>
                     <div >
                         <h5 class="p-2">Lorem ipsum dolor sit </h5>
@@ -67,7 +67,7 @@
                 </div>
                 <div class = "mt-4 event">
                     <div class="news_img">
-                        <img src="img\img_home\image 9.png">
+                        <img src="{{ asset('img\img_home\image 9.png') }}">
                     </div>
                     <div >
                         <h5 class="p-2">Lorem ipsum dolor sit </h5>
@@ -83,7 +83,7 @@
                 </div>
                 <div class = "mt-4 event">
                     <div class="news_img">
-                        <img src="img\img_home\image 9.png">
+                        <img src="{{ asset('img\img_home\image 9.png') }}">
                     </div>
                     <div >
                         <h5 class="p-2">Lorem ipsum dolor sit </h5>
@@ -99,7 +99,7 @@
                 </div>
                 <div class = "mt-4 event">
                     <div class="news_img">
-                        <img src="img\img_home\image 9.png">
+                        <img src="{{ asset('img\img_home\image 9.png') }}">
                     </div>
                     <div >
                         <h5 class="p-2">Lorem ipsum dolor sit </h5>
@@ -115,7 +115,7 @@
                 </div>
                 <div class = "mt-4 event">
                     <div class="news_img">
-                        <img src="img\img_home\image 9.png">
+                        <img src="{{ asset('img\img_home\image 9.png') }}">
                     </div>
                     <div >
                         <h5 class="p-2">Lorem ipsum dolor sit </h5>
@@ -200,7 +200,7 @@
             <div class="d-flex flex-wrap justify-content-center   partnerses">
                 <div class="d-flex  align-items-center m-1 partners">
                     <div class = "partner_img">
-                        <img src="img/img_home/image 20.png">
+                        <img src="{{ asset('img/img_home/image 20.png') }}">
                     </div>
                     <div class="pl-3 partner_text">
                         <h4>Partner name</h4>
@@ -210,7 +210,7 @@
                 </div>
                 <div class="d-flex  align-items-center m-1   partners">
                     <div class = "partner_img">
-                        <img src="img/img_home/image 26.png">
+                        <img src="{{ asset('img/img_home/image 26.png') }}">
                     </div>
                     <div class="pl-3 partner_text">
                         <h4>Partner name</h4>
@@ -220,7 +220,7 @@
                 </div>
                 <div class="d-flex  align-items-center m-1   partners">
                     <div class = "partner_img">
-                        <img src="img/img_home/image 30.png">
+                        <img src="{{ asset('img/img_home/image 30.png') }}">
                     </div>
                     <div class="pl-3 partner_text">
                         <h4>Partner name</h4>
@@ -230,7 +230,7 @@
                 </div>
                 <div class="d-flex  align-items-center m-1   partners">
                     <div class = "partner_img">
-                        <img src="img/img_home/image 31.png">
+                        <img src="{{ asset('img/img_home/image 31.png') }}">
                     </div>
                     <div class="pl-3 partner_text">
                         <h4>Partner name</h4>

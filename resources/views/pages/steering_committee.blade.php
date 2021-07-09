@@ -1,13 +1,13 @@
 @extends('layouts.layout')
 @section('styles')
-    <link rel="stylesheet" href="css/steeringCommittee.css">
+    <link rel="stylesheet" href="{{ asset('css/steeringCommittee.css') }}">
 @endsection
 @section('content')
 
     <section id="section_index">
         <section class="steering_committee ">
 
-            <h1 class="steering_label d-flex justify-content-center">Steering Committee</h1>
+            <h1 class="  mt-5 steering_label d-flex justify-content-center">Steering Committee</h1>
             <div class="steering_text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis fermentum lectus.
                 Curabitur vehicula tellus in enim tempor, at congue dui tempor. Proin efficitur eros ultricies ex
@@ -42,40 +42,40 @@
             <div class="all_img">
                 <div class="row image_row justify-content-center ">
                     <div class=" col-lg-4 col-md-6 col-ms-12 image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12   image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
                     <div class=" col-lg-4 col-md-6 col-ms-12  image_col">
-                        <img src="img/img_steering/Rectangle 54.jpg" alt="">
+                        <img src="{{ asset('img/img_steering/Rectangle 54.jpg') }}" alt="">
                     </div>
 
 

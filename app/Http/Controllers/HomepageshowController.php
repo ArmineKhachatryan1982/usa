@@ -13,7 +13,7 @@ class HomepageshowController extends Controller
 
     function __construct()
     {
-         $this->middleware('permission:homepageshow-list|homepageshow-edit', ['only' => ['index','show']]);
+         //$this->middleware('permission:homepageshow-list|homepageshow-edit', ['only' => ['index','show']]);
          // $this->middleware('permission:product-create', ['only' => ['create','store']]);
          // $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
          // $this->middleware('permission:product-delete', ['only' => ['destroy']]);
@@ -23,8 +23,11 @@ class HomepageshowController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($locale)
     {
+
+
+        app()->setLocale($locale);
         $title="Insert data to Home page table";
         return view('admin.homepageshow',compact('title'));
     }

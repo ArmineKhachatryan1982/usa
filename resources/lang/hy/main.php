@@ -12,16 +12,22 @@ return [
     | you want to customize your views to better match your application.
     |
     */
-
+    /* menu strart*/
     'navigation' => 'Navigation',
     'home' => 'Գլխավոր',
     'about_us' => 'Մեր մասին',
-    'courses' => 'Courses',
-    'coorts' => 'Coorts',
-    'alumni_association' => 'Alumni Association',
-    'steering_committee' => 'Steering Committee',
-    'contacts' => 'Կապ',
-    
+    'our_partners'=>'Մեր գործընկերները',
+    'training_programs'=>'Դասընթացների ծրագրեր',
+    'news_media'=>'Նորություններ և մեդիա',
+    'cohorts'=>'Համախոհներ',
+    'steering_committee' => 'Եկվորների կոմիտե',
+    'alumni_association' => 'Շրջանավարտների ասոցիացիա',
+    'contacts_us' => 'Կապը մեզ հետ',
+    /* menu end*/
+    /* footer start*/
+    'footer_contact_news'=>'Հայերեն տարբերակ  sit amet, consectetur adipiscing elit. Suspendisse quis fermentum lectus. Curabitur vehicula tellus in enim tempor, at congue dui tempor. Proin efficitur eros ultricies ex venenatis varius.Sollicitudin sem. Nunc et mattis est, nec fringilla lacus. Vivamus sodales nunc nec nunc mollis volutpat. Fusce finibus tortor id lectus ultrices, ac fringilla risus dictum. Donec scelerisque nibh eget ipsum iaculis iaculis.',
+    'footer_mail'=>'հայերեն@gmail.com',
+    /* footer end*/
 
     // contact page form
 

@@ -3,15 +3,19 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomepageController;
-use App\Http\Controllers\AboutusController;
-use App\Http\Controllers\News1Controller;
-use App\Http\Controllers\ContactusController;
-use App\Http\Controllers\PartnersController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\OurPartnersController;
+use App\Http\Controllers\TrainingProgramController;
+use App\Http\Controllers\NewsAndMediaController;
 use App\Http\Controllers\CohortsController;
-use App\Http\Controllers\Courses4Controller;
-use App\Http\Controllers\AluminiassciationController;
 use App\Http\Controllers\SteeringcommitteeController;
-use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\AluminiassciationController;
+use App\Http\Controllers\ContactusController;
+
+
+
+
+
 
 
 
@@ -39,33 +43,28 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// url run defult lang 
+// url run defult lang
 Route::get('/', function () {
           return redirect('/'.app()->getLocale());
       });
 
 Route::prefix('{locale?}')->name('locale.')->group(function (){
 
-Route::get('/',[HomepageController::class,'index']);
-Route::get('/contact',[ContactController::class,'index'])->name('contact');
-
-Route::get('/aboutus',[AboutusController::class,'index'])->name('about');
-Route::get('/news1',[News1Controller::class,'index'])->name('news');
-Route::get('/contactus',[ContactusController::class,'index'])->name('contactus');
-Route::get('/partners',[PartnersController::class,'index'])->name('partners');
-Route::get('/cohorts',[CohortsController::class,'index']);
-Route::get('/courses4',[Courses4Controller::class,'index'])->name('courses');
-Route::get('/alumini',[AluminiassciationController::class,'index'])->name('alumni');
-Route::get('/steeringcommittee',[SteeringcommitteeController::class,'index'])->name('steering');
-Route::get('/cohorts',[CohortsController::class,'index'])->name('')->name('cohorts');
-Route::get('/trainingprograam',[TrainingController::class,'index'])->name('training');
-
+    Route::get('/',[HomepageController::class,'index']);
+    Route::get('/about',[AboutController::class,'index'])->name('about');
+    Route::get('/our_partners',[OurPartnersController::class,'index'])->name('our_partners');
+    Route::get('/training_program',[TrainingProgramController::class,'index'])->name('training_program');
+    Route::get('/news&media',[NewsAndMediaController::class,'index'])->name('news&media');
+    Route::get('/cohorts',[CohortsController::class,'index'])->name('')->name('cohorts');
+    Route::get('/steeringcommittee',[SteeringcommitteeController::class,'index'])->name('steeringcommittee');
+    Route::get('/aluminiassciation',[AluminiassciationController::class,'index'])->name('aluminiassciation');
+    Route::get('/contactus',[ContactusController::class,'index'])->name('contactus');
 });
 
 
 // role and prmishen  middleware
 Route::group(['middleware' => ['auth']], function() {
-
+});
 Route::get('/admin/adminhomepage',[AdminhomepageController::class,'index']);
 
 Route::get('/admin/adminhomepageshow',[HomepageshowController::class,'index'])->name('adminhomepageshow');
@@ -76,5 +75,5 @@ Route::get('/admin/edithomepage/{homepageid}',[AdminhomepageupdateController::cl
 
 
 
-});
+
 
