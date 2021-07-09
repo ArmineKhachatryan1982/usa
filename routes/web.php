@@ -25,6 +25,7 @@ use App\Http\Controllers\AdminhomepageupdateController;
 use App\Http\Controllers\SteeringCommitteeUpdateController;
 use App\Http\Controllers\AlumniAssociationUpdateController;
 use App\Http\Controllers\CohortUpdateController;
+use App\Http\Controllers\SteeringCommitteeImageUploadController;
 
 
 /*
@@ -74,13 +75,13 @@ Route::group(['middleware' => ['auth']], function() {
 Route::get('/admin/adminhomepageshowhomepage',[AdminhomepageController::class,'index']);
 Route::get('/',[HomepageshowController::class,'index'])->name('adminhomepageshow');
 
-
+// Creating new controller for  working admin panel HomepageshowController,AdminhomepageupdateController table  insert data,show and update data routs start
 Route::get('/admin/adminhomepageshow',[HomepageshowController::class,'index'])->name('adminhomepageshow');
 Route::post('/admin/adminhomepageshow',[HomepageshowController::class,'store'])->name('homepageshow.store');
-
 Route::get('/admin/tableupdatedelete',[AdminhomepageupdateController::class,'index'])->name('tableupdatedelete');
 Route::get('/admin/edithomepage/{homepageid}',[AdminhomepageupdateController::class,'show'])->name('edithomepagecreate');
-
+Route::post('/admin/edithomepage',[AdminhomepageupdateController::class,'update'])->name('updatehomepage');
+//Creating new controller for  working admin panel HomepageshowController,AdminhomepageupdateController table  insert data,show and update data routs end
 Route::get('/admin/admin_cohorts',[CohortUpdateController::class,'index']);
 
 
@@ -89,6 +90,12 @@ Route::get('/admin/admin_cohorts',[CohortUpdateController::class,'index']);
 Route::get('/admin/admin_Steering_Committee',[SteeringCommitteeUpdateController::class,'index'])->name('admin_Steering_Committee');
 Route::get('admin/admin_steering_committee_edit/{steering_Id}',[SteeringCommitteeUpdateController::class,'show'])->name('admin_steering_committee_edit');
 Route::post('/admin/admin_steering_committee_update',[SteeringCommitteeUpdateController::class,'update'])->name('admin_steering_committee_update');
+//Routes for uploading  img for steering committee blade start
+ Route::get ('/admin/admin_steering_committe_img_form',[SteeringCommitteeImageUploadController::class,'index'])->name('admin_steering_committe_img_form');
+ Route::post('/admin/admin_steering_committe_img_upload',[SteeringCommitteeImageUploadController::class,'store'])->name('admin_steering_committe_img_upload');
+// Routes for uploading  img for steering committee blade end
+
+
 //Steering_Committee table show and update routs end
 
 // Creating new controller for  working admin panel Alumni_Association table show and update routs start
