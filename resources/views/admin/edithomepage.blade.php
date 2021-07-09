@@ -5,7 +5,7 @@
         <div class="col-md-6" style="margin-top:100px">
             <div class="panel-body m-5">
 
-                <h1>{{ $id}}</h1>
+                <h1>{{ $alumnis}}</h1>
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>

@@ -23,11 +23,11 @@ class HomepageshowController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($locale)
+    public function index()
     {
 
 
-        app()->setLocale($locale);
+
         $title="Insert data to Home page table";
         return view('admin.homepageshow',compact('title'));
     }

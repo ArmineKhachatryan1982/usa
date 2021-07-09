@@ -22,6 +22,9 @@ use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\AdminhomepageController;
 use App\Http\Controllers\HomepageshowController;
 use App\Http\Controllers\AdminhomepageupdateController;
+use App\Http\Controllers\SteeringCommitteeUpdateController;
+use App\Http\Controllers\AlumniAssociationUpdateController;
+use App\Http\Controllers\CohortUpdateController;
 
 
 /*
@@ -64,16 +67,34 @@ Route::prefix('{locale?}')->name('locale.')->group(function (){
 
 // role and prmishen  middleware
 Route::group(['middleware' => ['auth']], function() {
+
+
+
 });
-Route::get('/admin/adminhomepage',[AdminhomepageController::class,'index']);
+Route::get('/admin/adminhomepageshowhomepage',[AdminhomepageController::class,'index']);
+Route::get('/',[HomepageshowController::class,'index'])->name('adminhomepageshow');
+
 
 Route::get('/admin/adminhomepageshow',[HomepageshowController::class,'index'])->name('adminhomepageshow');
 Route::post('/admin/adminhomepageshow',[HomepageshowController::class,'store'])->name('homepageshow.store');
+
 Route::get('/admin/tableupdatedelete',[AdminhomepageupdateController::class,'index'])->name('tableupdatedelete');
 Route::get('/admin/edithomepage/{homepageid}',[AdminhomepageupdateController::class,'show'])->name('edithomepagecreate');
 
+Route::get('/admin/admin_cohorts',[CohortUpdateController::class,'index']);
 
 
 
+// Creating new controller for  working admin panel Steering_Committee table show and update routs start
+Route::get('/admin/admin_Steering_Committee',[SteeringCommitteeUpdateController::class,'index'])->name('admin_Steering_Committee');
+Route::get('admin/admin_steering_committee_edit/{steering_Id}',[SteeringCommitteeUpdateController::class,'show'])->name('admin_steering_committee_edit');
+Route::post('/admin/admin_steering_committee_update',[SteeringCommitteeUpdateController::class,'update'])->name('admin_steering_committee_update');
+//Steering_Committee table show and update routs end
+
+// Creating new controller for  working admin panel Alumni_Association table show and update routs start
+Route::get('/admin/admin_Alumni_Association',[AlumniAssociationUpdateController::class,'index'])->name('admin_Alumni_Association');
+Route::get('/admin/admin_Alumni_Association_edit/{alumni_Id}',[AlumniAssociationUpdateController::class,'show'])->name('admin_Alumni_Association_edit');
+Route::post('/admin/admin_Alumni_Association_updated',[AlumniAssociationUpdateController::class,'update'])->name('admin_Alumni_Association_updated');
+//Alumni_Association table show and update routs end
 
 
