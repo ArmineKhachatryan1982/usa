@@ -54,25 +54,25 @@ class SteeringCommitteeImageUploadController extends Controller
 
         $request->input('steering_committees_id');
       $steering_committees_id = $request->input('steering_committees_id');
-      $img_name = $request->file('img_name');
+      $img_name= $request->file('img_name');
 
-//        if($request->hasfile('steering_img_file')){
-//            $file=$request->file('steering_img_file');
-//            echo $filename=$file->getClientOriginalName();
-//            $file->move(public_path('img/img_steering'),$filename);
-//        }
-//        $steering_img = New Steering_img();
-//        $steering_img -> steering_committees_id = $steering_committees_id;
-//        $steering_img -> img_name = "$filename";
-//        $steering_img ->save();
+        if($request->hasfile('steering_img_file')){
+            $file=$request->file('steering_img_file');
+            $filename1=$file->getClientOriginalName();
+            $file->move(public_path('img/img_steering'),$filename1);
+        }
+        $steering_img = New Steering_img();
+        $steering_img ->steering_committees_id=$steering_committees_id;
+        $steering_img ->img_name=$filename1;
+        $steering_img ->save();
 
-//      echo  $creat = Steering_img::create(['$steering_img'=>$steering_committees_id,'img_name'=>"hello"]);
 
-        $creat= DB::table('steering_imgs')->insert([
-            'steering_committees_id'=>$steering_committees_id,'img_name'=>"u"
-        ]);
 
-die;
+//        $creat= DB::table('steering_imgs')->insert([
+//            'steering_committees_id'=>$steering_committees_id,'img_name'=>"u"
+//        ]);
+
+
         return redirect()->back()->with('success','Image successfully uploaded');
     }
 
