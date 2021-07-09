@@ -387,7 +387,7 @@
                     </a>
                     <ul class="sub">
                         <li><a class="" href="{{route('admin_Steering_Committee')}}">SC updatetable</a></li>
-{{--                        <li><a class="" href="">SC img update</a></li>--}}
+                        <li><a class="" href="{{ route('admin_steering_committe_img_form') }}">SC img update</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
