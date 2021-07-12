@@ -7,7 +7,7 @@
                     Upload image
                 </header>
                 <div class="panel-body">
-
+{{--                        {{ $updatecohortfirsttext[0]->text_en }}--}}
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -22,12 +22,16 @@
                             {{ Session::get('success') }}
                         </div>
                     @endif
-                    <form role="form" method="POST" action="{{ route('admin_steering_committe_img_upload') }}" enctype="multipart/form-data">
+                    <form role="form" method="POST" action="{{ route('admin_cohorts_first_text_update') }}" enctype="multipart/form-data">
                         @csrf
-                        <input type="hidden"  name='steering_committees_id' value="{{ $tableuploadform }}">
+                        <input type="hidden"  name='id' value="{{ $updatecohortfirsttext[0]->id }}">
                         <div class="form-group">
-                            <label for="steering_img_name">Image name</label>
-                            <input type="file" class="form-control" id="steering_img_name"  name="steering_img_name">
+                            <label for="cohorts_text_en">cohorts_text_en</label>
+                            <textarea  rows="10" class="form-control" id="cohorts_text_en"  name="cohorts_text_en">{{ $updatecohortfirsttext[0]->text_en }} </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="cohorts_text_am">cohorts_text_am</label>
+                            <textarea  rows="10" class="form-control" id="cohorts_text_am"  name="cohorts_text_am">{{ $updatecohortfirsttext[0]->text_am  }}$updatecohortfirsttext[0]->text_am</textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
@@ -38,5 +42,6 @@
     </section>
 
 @endsection('content')
+
 
 

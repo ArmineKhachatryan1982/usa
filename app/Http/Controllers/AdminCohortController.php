@@ -1,28 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Steering_committee;
-use App\Models\Steering_img;
+
 use Illuminate\Http\Request;
+use App\Models\Cohort;
+use App\Models\Cohort_info;
 use Illuminate\Support\Facades\DB;
 
-class SteeringcommitteeController extends Controller
+class AdminCohortController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($locale)
+    public function index()
     {
-        app()->setLocale($locale);
-        $steerings=DB::table('steering_committees')->get();
-        $steerings_img=DB::table('steering_imgs')->get();
+        $updatecohortfirsttext=DB::table('cohorts')->where('id',1000)->get();
+        return view('admin.admin_cohort_first_text_update',compact('updatecohortfirsttext'));
 
-
-
-
-        return view('pages.steering_committee',compact('steerings','steerings_img'));
     }
 
     /**
@@ -53,8 +49,11 @@ class SteeringcommitteeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+
     {
-        //
+        $updatecohortfirsttext=DB::table('cohorts')->where('id',$id)->get();
+
+        return view('admin.admin_cohort_first_text_update_form',compact('updatecohortfirsttext'));
     }
 
     /**
@@ -75,9 +74,16 @@ class SteeringcommitteeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $id=$request->id;
+//        dd($id);
+
+        $cohort_id = $request->id;
+        $cohort_text_en = $request->cohorts_text_en;
+        $cohort_text_am = $request->cohorts_text_am;
+        $updatecohort_first_text=Cohort::where('id',$cohort_id)->update(['text_en'=>$cohort_text_en,'text_am'=>$cohort_text_am]);
+        return redirect()->back()->with('success','Updated one record');
     }
 
     /**

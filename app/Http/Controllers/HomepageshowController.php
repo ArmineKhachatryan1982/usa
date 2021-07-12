@@ -63,8 +63,8 @@ class HomepageshowController extends Controller
         $home_page=New Home_page();
         if($request->hasfile('image_name_file')){
             $file=$request->file('image_name_file');
-//            $extention=$file->getClientOriginalExtension();
-//            $filename = time().'.'.$extention;
+//           $extention=$file->getClientOriginalExtension();
+//           $filename = time().'.'.$extention;
             $filename=$file->getClientOriginalName();
             $file->move(public_path('img/img_home'),$filename);
         }

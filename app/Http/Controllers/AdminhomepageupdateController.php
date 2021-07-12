@@ -125,8 +125,7 @@ class AdminhomepageupdateController extends Controller
 
 
         $h_id=$request->input('id');
-//        $img_name=$filename;
-//        $about_img_name=$about_image_filename;
+
         $updatehomepag=Home_page::where('id',$h_id)->update(['img_name'=>$filename,'about_img_name'=>$about_image_filename]);
 
 

@@ -375,8 +375,8 @@
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="">C updatetable</a></li>
-{{--                        <li><a class="" href="">C img update</a></li>--}}
+                        <li><a class="" href="{{ route('cohort_first_text_show') }}">C updatetable</a></li>
+                        <li><a class="" href="{{ route('admin_cohorts_img_and_text') }}">C img update</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
@@ -404,14 +404,10 @@
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
                         <i class="icon_documents_alt"></i>
-                        <span>Pages</span>
+                        <span>Home page</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="profile.html">Profile</a></li>
-                        <li><a class="" href="login.html"><span>Login Page</span></a></li>
-                        <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
-                        <li><a class="" href="blank.html">Blank Page</a></li>
                         <li><a class="" href="{{ route('tableupdatedelete') }}">Home page edit data</a></li>
                         <li><a class="" href="{{ route('adminhomepageshow') }}">Home page insert data</a></li>
                         <li><a class="" href="">Alumni Association </a></li>
