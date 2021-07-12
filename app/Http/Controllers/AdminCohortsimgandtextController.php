@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use app\Models\Cohort_info;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class CohortUpdateController extends Controller
+class AdminCohortsimgandtextController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,8 @@ class CohortUpdateController extends Controller
      */
     public function index()
     {
-        //
+        $cohort_info_tabe_show = DB::table('cohort_infos')->get();
+        return view('admin.admin_cohort_infos_table_show',compact('cohort_info_tabe_show'));
     }
 
     /**

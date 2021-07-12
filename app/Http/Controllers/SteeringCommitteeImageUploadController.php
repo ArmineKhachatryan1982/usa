@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Steering_img;
@@ -44,34 +45,25 @@ class SteeringCommitteeImageUploadController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request->file('img_name'));
-      //  dd($request->input('steering_committees_id'));
 
-//        $request->validate([
-//            'steering_img_file'=>'required',
-//        ]);
-
+        $request->validate([
+            'steering_img_name'=>'required',
+        ]);
 
         $request->input('steering_committees_id');
-      $steering_committees_id = $request->input('steering_committees_id');
-      $img_name= $request->file('img_name');
+        $steering_committees_id = $request->input('steering_committees_id');
 
-        if($request->hasfile('steering_img_file')){
-            $file=$request->file('steering_img_file');
-            $filename1=$file->getClientOriginalName();
-            $file->move(public_path('img/img_steering'),$filename1);
-        }
+
         $steering_img = New Steering_img();
+         if($request->hasfile('steering_img_name')){
+            $file=$request->file('steering_img_name');
+            $filename=$file->getClientOriginalName();
+            $file->move(public_path('img/img_steering'),$filename);
+         }
+
         $steering_img ->steering_committees_id=$steering_committees_id;
-        $steering_img ->img_name=$filename1;
+        $steering_img ->img_name=$filename;
         $steering_img ->save();
-
-
-
-//        $creat= DB::table('steering_imgs')->insert([
-//            'steering_committees_id'=>$steering_committees_id,'img_name'=>"u"
-//        ]);
-
 
         return redirect()->back()->with('success','Image successfully uploaded');
     }
