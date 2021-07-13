@@ -92,7 +92,9 @@ Route::post('/admin/edithomepage',[AdminhomepageupdateController::class,'update'
     Route::post('admin/admin_cohorts_first_text_update',[AdminCohortController::class,'update'])->name('admin_cohorts_first_text_update');
    // Cohorts image and text inserted route start
     Route::get('admin/admin_cohorts_img_and_text',[AdminCohortsimgandtextController::class,'index'])->name('admin_cohorts_img_and_text');
-    // Cohorts image and text update route end
+    Route::get('admin/admin_cohort_infos_img_text_form', [AdminCohortsimgandtextController::class,'create'])->name('admin_cohort_infos_img_text_form');
+    Route::post('admin/admin_cohort_infos_img_text_inserted',[AdminCohortsimgandtextController::class,'store'])->name('admin_cohort_infos_img_text_inserted');
+    // Cohorts image and text inserted route end
 // Creating new controller for  working admin panel  AdminCohortController table show and update routs end
 
 
