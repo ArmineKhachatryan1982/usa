@@ -376,7 +376,9 @@
                     </a>
                     <ul class="sub">
                         <li><a class="" href="{{ route('cohort_first_text_show') }}">C updatetable</a></li>
-                        <li><a class="" href="{{ route('admin_cohorts_img_and_text') }}">C img update</a></li>
+                        <li><a class="" href="{{ route('admin_cohort_infos_img_text_form') }}">C img & text upload</a></li>
+{{--                        <li><a class="" href="{{ route('admin_cohorts_img_and_text') }}">C img update</a></li>--}}
+
                     </ul>
                 </li>
                 <li class="sub-menu">
