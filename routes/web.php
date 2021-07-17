@@ -11,14 +11,6 @@ use App\Http\Controllers\CohortsController;
 use App\Http\Controllers\SteeringcommitteeController;
 use App\Http\Controllers\AluminiassciationController;
 use App\Http\Controllers\ContactusController;
-
-
-
-
-
-
-
-
 use App\Http\Controllers\AdminhomepageController;
 use App\Http\Controllers\HomepageshowController;
 use App\Http\Controllers\AdminhomepageupdateController;
@@ -27,7 +19,7 @@ use App\Http\Controllers\AlumniAssociationUpdateController;
 use App\Http\Controllers\AdminCohortController;
 use App\Http\Controllers\AdminCohortsimgandtextController;
 use App\Http\Controllers\SteeringCommitteeImageUploadController;
-
+use App\Http\Controllers\AAimageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,7 +66,7 @@ Route::group(['middleware' => ['auth']], function() {
 
 });
 Route::get('/admin/adminhomepageshowhomepage',[AdminhomepageController::class,'index']);
-Route::get('/',[HomepageshowController::class,'index'])->name('adminhomepageshow');
+Route::get('/admin',[HomepageshowController::class,'index'])->name('adminhomepageshow');
 
 // Creating new controller for  working admin panel HomepageshowController,AdminhomepageupdateController table  insert data,show and update data routs start
 Route::get('/admin/adminhomepageshow',[HomepageshowController::class,'index'])->name('adminhomepageshow');
@@ -116,4 +108,6 @@ Route::get('/admin/admin_Alumni_Association_edit/{alumni_Id}',[AlumniAssociation
 Route::post('/admin/admin_Alumni_Association_updated',[AlumniAssociationUpdateController::class,'update'])->name('admin_Alumni_Association_updated');
 //Alumni_Association table show and update routs end
 
-
+Route::get('/admin/admin_Alumni_Association_image',[AAimageController::class,'index'])->name('admin_Alumni_Association_image');
+Route::post('/admin/admin_Alumni_Association_image_insert',[AAimageController::class,'insert'])->name('admin_Alumni_Association_image_insert');
+Route::post('/admin/admin_Alumni_Association_image_delete',[AAimageController::class,'delete'])->name('admin_Alumni_Association_image_delete');

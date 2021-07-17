@@ -22,12 +22,12 @@
                         <input type="hidden"  name='id' value="{{ $value->id }}">
                         <div class="form-group">
                             <label for="title_en">title_en</label>
-                            <input type="text" class="form-control"  id=title_en" name="title_en"  value=" {{ $value->title_en }}">
+                            <input type="text" class="form-control"  id="title_en" name="title_en"  value=" {{ $value->title_en }}">
 
                         </div>
                         <div class="form-group">
                             <label for="title_am">title_am</label>
-                            <input type="text" class="form-control"  id=title_am" name="title_am"  value="{{ $value->title_am }}">
+                            <input type="text" class="form-control"  id="title_am" name="title_am"  value="{{ $value->title_am }}">
 
                         </div>
                         <div class="form-group">

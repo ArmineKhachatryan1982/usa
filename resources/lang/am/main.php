@@ -31,9 +31,14 @@ return [
 
 
     // contact page form
-
+    'contacts'=>'Կապ',
     'name_surname'=>'Անուն Ազգանուն',
     'email'=>'Էլեկտրոնային Հասցե',
     'message'=>'Հաղորդագրություն',
     'send'=>'Ուղարկել',
+
+
+    // alumni_association
+
+    'alumni_association'=>'Շրջանավարտների ասոցիացիա',
 ];

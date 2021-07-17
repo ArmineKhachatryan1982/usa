@@ -399,8 +399,12 @@
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="{{route('admin_Alumni_Association')}}">AA updatetable</a></li>
+                        <li><a class="" href="{{route('admin_Alumni_Association_image')}}">AA updatetable</a></li>
                     </ul>
+                    <ul class="sub">
+                        <li><a class="" href="{{route('admin_Alumni_Association_image')}}">AA image</a></li>
+                    </ul>
+                  
                 </li>
 
                 <li class="sub-menu">
