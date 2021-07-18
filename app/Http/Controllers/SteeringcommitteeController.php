@@ -16,13 +16,12 @@ class SteeringcommitteeController extends Controller
     public function index($locale)
     {
         app()->setLocale($locale);
-        $steerings=DB::table('steering_committees')->get();
-        $steerings_img=DB::table('steering_imgs')->get();
+         $data = Steering_committee::where('id','1000')->first();
 
+        $steerings_img   = Steering_img::where('steering_committees_id','1000')->get();
 
+        return view('pages.steering_committee',['data'=>$data,'steerings_img'=>$steerings_img]);
 
-
-        return view('pages.steering_committee',compact('steerings','steerings_img'));
     }
 
     /**

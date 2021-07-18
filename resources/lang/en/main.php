@@ -29,9 +29,21 @@ return [
     'footer_mail'=>'example@gmail.com',
     /* footer end*/
     // contact page form
-
+    'contacts'=>'Contacts',
     'name_surname'=>'Name Surname',
     'email'=>'Email',
     'message'=>'Message',
     'send'=>'Send',
+
+     // alumni_association
+
+    'alumni_association'=>'Alumni Association',
+
+     // READ MORE
+
+    'reade_more'=>'READ MORE',
+    // News
+    'news'=>'News',
+    //Partners
+    'partners'=>'Partners',
 ];

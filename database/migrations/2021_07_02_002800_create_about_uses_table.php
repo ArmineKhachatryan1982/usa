@@ -21,6 +21,10 @@ class CreateAboutUsesTable extends Migration
             $table->longText('paragraph_two_am');
             $table->longText('paragraph_tree_en');
             $table->longText('paragraph_tree_am');
+            $table->string('img_one');
+            $table->string('img_two');
+            $table->string('img_tree');
+            $table->string('img_fore');
             $table->timestamps();
         });
     }

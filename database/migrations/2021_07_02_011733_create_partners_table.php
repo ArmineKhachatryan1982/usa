@@ -15,11 +15,21 @@ class CreatePartnersTable extends Migration
     {
         Schema::create('partners', function (Blueprint $table) {
             $table->id()->from(1000);
-            $table->string('title_en');
-            $table->string('title_am');
-            $table->longText('text_en');
-            $table->longText('text_am');
-            $table->string('img');
+            $table->string('name_am');
+            $table->string('name_en');
+            $table->longText('min_text_en');
+            $table->longText('min_text_am');
+            $table->string('img_partner');
+            $table->string('compni_logo');
+            $table->longText('des_am');
+            $table->longText('des_en');
+            $table->longText('text_one_am');
+            $table->longText('text_one_en');
+            $table->longText('text_two_am');
+            $table->longText('text_two_en');
+            $table->longText('text_tree_am');
+            $table->longText('text_three_en');
+          
             $table->timestamps();
         });
     }

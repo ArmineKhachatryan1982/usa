@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Alumni_association;
+use App\Models\Alumni_association_img;
 class AluminiassciationController extends Controller
 {
     /**
@@ -14,7 +15,12 @@ class AluminiassciationController extends Controller
     public function index($locale)
     {
         app()->setLocale($locale);
-        return view('pages.alumni association');
+
+        $data = Alumni_association::where('id','1000')->first();
+
+        $image = Alumni_association_img::where('alumni_associations_id','1000')->get();
+
+        return view('pages.alumni association',['data'=>$data,'image'=>$image]);
     }
 
     /**

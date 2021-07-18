@@ -6,15 +6,23 @@
 
     <section id="section_index">
         <section class="steering_committee ">
-
             <h1 class="  mt-5 steering_label d-flex justify-content-center">Steering Committee</h1>
             <div class="steering_text">
-                {{ $lng='paragraph_one_'.app()->getLocale() }}
+                
                 <div class="my-3 text-justify" id="paragraph_one">
-                    {{ $steerings[0]->$lng }}
+                   @if(app()->getLocale() == "en")
+                    {{$data->paragraph_two_en}}
+                    @else
+                    {{$data->paragraph_two_am}}
+                    @endif
                 </div>
                 <div class="my-3 text-justify" id="paragraph_two">
-                    {{ $steerings[0]->paragraph_two_en}}
+                   @if(app()->getLocale() == "en")
+                    {{$data->paragraph_two_en}}
+                    @else
+                    {{$data->paragraph_two_am}}
+                    @endif
+                   
                 </div>
             </div>
 

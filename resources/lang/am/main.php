@@ -31,9 +31,25 @@ return [
 
 
     // contact page form
-
+    'contacts'=>'Կապ',
     'name_surname'=>'Անուն Ազգանուն',
     'email'=>'Էլեկտրոնային Հասցե',
     'message'=>'Հաղորդագրություն',
     'send'=>'Ուղարկել',
+
+
+    // alumni_association
+
+    'alumni_association'=>'Շրջանավարտների ասոցիացիա',
+
+    // READ MORE
+
+    'reade_more'=>'Կարդալ ավելին',
+
+
+    // News
+    'news'=>'Նորություն',
+
+    //Partners
+    'partners'=>'Գործընկերները',
 ];

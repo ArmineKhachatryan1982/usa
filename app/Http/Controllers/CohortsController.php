@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cohort;
+use App\Models\Cohort_info;
+use Illuminate\Support\Facades\DB;
 
 class CohortsController extends Controller
 {
@@ -14,6 +17,7 @@ class CohortsController extends Controller
     public function index($locale)
     {
         app()->setLocale($locale);
+
         return view('pages.cohorts');
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\News_and_event;
 
 class NewsAndMediaController extends Controller
 {
@@ -15,7 +16,9 @@ class NewsAndMediaController extends Controller
     {
         app()->setLocale($locale);
 
-        return view('pages.news_&_media');
+
+        $employees=News_and_event::paginate(9);
+        return view('pages.news',compact('employees'));
     }
 
     /**

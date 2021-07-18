@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>america</title>
+    <title>Fetep Armenia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- font icon -->
     <link href="{{ asset('css/elegant-icons-style.css') }}" rel="stylesheet" />
@@ -25,18 +25,31 @@
 
 </head>
 <body>
-<header>
-{{--    header first start--}}
-    <div class="header_first">
-        <div class="container">
-            <div class="d-flex  justify-content-between align-items-center  search_section">
-                <div  id="logo"></div>
-                <div class="d-flex lang">
-                    <ul class="d-flex" >
-                        <li class="d-inline p-2"><a href="{{ asset('/') }}{{request()->path()}}" class=" text-white">ARM</a></li>
-                        <li class="d-inline p-2"><a href="{{ asset('/') }}{{request()->path()}}" class=" text-white">ENG</a></li>
-                    </ul>
-                    <div class="position-relative search_div ">
+    <header>
+        {{--    header first start--}}
+        <div class="header_first">
+            <div class="container">
+                <div class="d-flex  justify-content-between align-items-center  search_section">
+                    <div  id="logo"></div>
+                    <div class="d-flex lang">
+                        <ul class="d-flex" >
+                           <?php $pathe =explode("/", request()->path());
+                           if(request()->path() == "am" or request()->path() == "en")
+                           {
+                               $patham = "am";
+                               $pathen = "en";
+                           }else{
+                               $patham = "am/".$pathe[1];
+                               $pathen = "en/".$pathe[1];
+                           }
+                           ?>
+
+
+                           <li class="d-inline p-2"><a href="{{ asset('/') }}<?php echo $patham?>
+                           "class=" text-white">ARM</a></li>
+                           <li class="d-inline p-2"><a href="{{ asset('/') }}<?php echo $pathen?>" class=" text-white">ENG</a></li>
+                       </ul>
+                       <div class="position-relative search_div ">
                         <input class="form-control " type="search"  aria-label="Search">
                         <img class="p-1" src="{{ asset('img/img_footer/Vector.jpg') }}">
                     </div>
@@ -44,62 +57,62 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
 {{--    header first start--}}
 
-    <!-- menu start -->
-    <div class="header_second p-2">
-        <div class="container" >
-            <div class="aaa">
-                <nav class="navbar navbar-expand-lg navbar-light  navbar_nav">
-                    <div>
-                        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-                        <button class="navbar-toggler text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon text-white"></span>
-                        </button>
+<!-- menu start -->
+<div class="header_second p-2">
+    <div class="container" >
+        <div class="aaa">
+            <nav class="navbar navbar-expand-lg navbar-light  navbar_nav">
+                <div>
+                    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                    <button class="navbar-toggler text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon text-white"></span>
+                    </button>
 
-                        <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                            <ul class="navbar-nav d-flex  justify-content-around" id="mynav">
+                    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                        <ul class="navbar-nav d-flex  justify-content-around" id="mynav">
 
-                                <li class="nav-item text-center">
-                                    <a class="nav-link text-white" href="{{ asset( app()->getLocale().'/about') }}">@lang('main.about_us')</a>
-                                </li>
-                                <li class="nav-item text-center">
-                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/our_partners') }}">@lang('main.our_partners')</a>
-                                </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link text-white" href="{{ asset( app()->getLocale().'/about') }}">@lang('main.about_us')</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/our_partners') }}">@lang('main.our_partners')</a>
+                            </li>
 
-                                <li class="nav-item text-center">
-                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/training_program') }}">@lang('main.training_programs')</a>
-                                </li>
-                                <li class="nav-item text-center">
-                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/news&media') }}">@lang('main.news_media')</a>
-                                </li>
-                                <li class="nav-item text-center">
-                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/cohorts') }}">@lang('main.cohorts')</a>
-                                </li>
-                                <li class="nav-item text-center">
-                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/steeringcommittee') }}">@lang('main.steering_committee')</a>
-                                </li>
-                                <li class="nav-item text-center">
-                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/aluminiassciation') }}">@lang('main.alumni_association')</a>
-                                </li>
-                                <li class="nav-item text-center">
-                                    <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/contactus') }}">@lang('main.contacts_us')</a>
-                                </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/training_program') }}">@lang('main.training_programs')</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/news&media') }}">@lang('main.news_media')</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/cohorts') }}">@lang('main.cohorts')</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/steeringcommittee') }}">@lang('main.steering_committee')</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/aluminiassciation') }}">@lang('main.alumni_association')</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/contactus') }}">@lang('main.contacts_us')</a>
+                            </li>
 
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
-                </nav>
-            </div>
-
+                </div>
+            </nav>
         </div>
+
     </div>
-    <!-- menu end -->
+</div>
+<!-- menu end -->
 </header>
 <section id="section_index">
     <!-- main section content  start-->
-        @yield('content')
+    @yield('content')
     <!--  main section content finish-->
 </section>
 {{--footer start--}}
@@ -110,24 +123,24 @@
 
                 <div class="w-50 px-5 footer_contact_news">
                     <div  id="logo"></div>
-                    <p class="text-white  text-justify">@lang('main.footer_contact_news')</p>
+                    <p class="text-white   text-justify">@lang('main.footer_contact_news')</p>
                 </div>
-                    <div class="d-flex flex-column    px-3 footer_contact_news">
-                        <h3 class="text-white">Navigation</h3>
-                        <a class=" text-white mt-4" href="{{ asset( app()->getLocale().'/about') }}">@lang('main.about_us')</a>
-                        <a class=" text-white" href="{{ asset(app()->getLocale().'/our_partners') }}">@lang('main.our_partners')</a>
-                        <a class=" text-white" href="{{ asset(app()->getLocale().'/training_program') }}">@lang('main.training_programs')</a>
-                        <a class=" text-white" href="{{ asset(app()->getLocale().'/news&media') }}">@lang('main.news_media')</a>
-                        <a class=" text-white" href="{{ asset(app()->getLocale().'/cohorts') }}">@lang('main.cohorts')</a>
-                        <a class=" text-white" href="{{ asset(app()->getLocale().'/steeringcommittee') }}">@lang('main.steering_committee')</a>
-                        <a class=" text-white" href="{{ asset(app()->getLocale().'/aluminiassciation') }}">@lang('main.alumni_association')</a>
+                <div class="d-flex flex-column    px-3 footer_contact_news">
+                    <h3 class="text-white">Navigation</h3>
+                    <a class=" text-white mt-4" href="{{ asset( app()->getLocale().'/about') }}">@lang('main.about_us')</a>
+                    <a class=" text-white" href="{{ asset(app()->getLocale().'/our_partners') }}">@lang('main.our_partners')</a>
+                    <a class=" text-white" href="{{ asset(app()->getLocale().'/training_program') }}">@lang('main.training_programs')</a>
+                    <a class=" text-white" href="{{ asset(app()->getLocale().'/news&media') }}">@lang('main.news_media')</a>
+                    <a class=" text-white" href="{{ asset(app()->getLocale().'/cohorts') }}">@lang('main.cohorts')</a>
+                    <a class=" text-white" href="{{ asset(app()->getLocale().'/steeringcommittee') }}">@lang('main.steering_committee')</a>
+                    <a class=" text-white" href="{{ asset(app()->getLocale().'/aluminiassciation') }}">@lang('main.alumni_association')</a>
 
-                        <a class=" text-white" href="{{ asset(app()->getLocale().'/contactus') }}">@lang('main.contacts_us')</a>
-                    </div>
-                    <div class=" d-flex flex-column  w-25 pt-5  footer_contact_news">
-                        <a href="#" class="p-  mt-4  text-white"><i class="fa fa-phone mr-3"></i>875-856-856</a>
-                        <a href="#" class="p-1  text-white"><i class="fa fa-envelope mr-3"></i>@lang('main.footer_mail')</a>
-                    </div>
+                    <a class=" text-white" href="{{ asset(app()->getLocale().'/contactus') }}">@lang('main.contacts_us')</a>
+                </div>
+                <div class=" d-flex flex-column  w-25 pt-5  footer_contact_news">
+                    <a href="#" class="p-  mt-4  text-white"><i class="fa fa-phone mr-3"></i>875-856-856</a>
+                    <a href="#" class="p-1  text-white"><i class="fa fa-envelope mr-3"></i>@lang('main.footer_mail')</a>
+                </div>
             </div>
         </div>
     </div>

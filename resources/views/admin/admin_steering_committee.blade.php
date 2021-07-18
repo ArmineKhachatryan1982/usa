@@ -30,8 +30,5 @@
             </tbody>
         </table>
     </section>
-
-
-
 @endsection(''content'')
 

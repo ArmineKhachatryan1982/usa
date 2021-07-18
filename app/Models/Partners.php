@@ -9,10 +9,21 @@ class Partners extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'title_en',
-        'title_am',
-        'text_en',
-        'text_am',
-        'img',
+        'name_am',
+        'name_en',
+        'min_text_en',
+        'min_text_am',
+        'img_partner',
+        'compni_logo',
+        'des_am',
+        'des_en',
+        'text_one_am',
+        'text_one_en',
+        'text_two_am',
+        'text_two_en',
+        'text_tree_am',
+        'text_three_en',
     ];
 }
+   
+          
