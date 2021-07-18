@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Partners;
 
 class OurPartnersController extends Controller
 {
@@ -14,7 +15,11 @@ class OurPartnersController extends Controller
     public function index($locale)
     {
         app()->setLocale($locale);
-        return view('pages.our_partners');
+
+        $employees=Partners::paginate(6);
+        return view('pages.our_partners',compact('employees'));
+
+       
 
     }
 

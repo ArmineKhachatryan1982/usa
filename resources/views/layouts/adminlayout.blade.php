@@ -9,7 +9,7 @@
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Creative - Bootstrap Admin Template</title>
+    <title>Admin Panel</title>
 
     <!-- Bootstrap CSS -->
     <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -53,7 +53,7 @@
         </div>
 
         <!--logo start-->
-        <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
+        <a href="{{ asset('/') }}" class="logo">Fetep <span class="lite">Armenia</span></a>
         <!--logo end-->
 
         <div class="nav search-row" id="top_menu">
@@ -315,57 +315,49 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu">
                 <li class="active">
-                    <a class="" href="index.html">
+                    <a class="/admin/dashbord" href="admin_partnore_add">
                         <i class="icon_house_alt"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
-                        <i class="icon_document_alt"></i>
-                        <span>Forms</span>
+                        <span>Our Partners</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="form_component.html">Form Elements</a></li>
-                        <li><a class="" href="form_validation.html">Form Validation</a></li>
+                        <li><a class="" href="{{route('admin_partnore_add')}}">Our Partners</a></li> 
                     </ul>
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
-                        <i class="icon_desktop"></i>
-                        <span>UI Fitures</span>
+                        <span>Our Affiliates</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="general.html">Elements</a></li>
-                        <li><a class="" href="buttons.html">Buttons</a></li>
-                        <li><a class="" href="grids.html">Grids</a></li>
+                        <li><a class="" href="{{route('admin_affiliates_add')}}">Our Affiliates</a></li> 
                     </ul>
                 </li>
-                <li>
-                    <a class="" href="widgets.html">
-                        <i class="icon_genius"></i>
-                        <span>Widgets</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="" href="chart-chartjs.html">
-                        <i class="icon_piechart"></i>
-                        <span>Charts</span>
-
-                    </a>
-
-                </li>
-
-                <li class="sub-menu">
+                 <li class="sub-menu">
                     <a href="javascript:;" class="">
-                        <i class="icon_table"></i>
-                        <span>Tables</span>
+                        <span>About</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="basic_table.html">Basic Table</a></li>
+                        <li><a class="" href="{{route('admin_about_edit')}}">About Page</a></li> 
+                        <li><a class="" href="{{route('admin_aboutindex_edit')}}">About Index</a></li> 
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+
+                        <span>New and events</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="{{route('admin_news_and_events')}}">News</a></li>
+                        <li><a class="" href="{{route('admin_news_and_events_add')}}">Create News</a></li>
+                       
                     </ul>
                 </li>
                 <li class="sub-menu">
@@ -377,10 +369,11 @@
                     <ul class="sub">
                         <li><a class="" href="{{ route('cohort_first_text_show') }}">C updatetable</a></li>
                         <li><a class="" href="{{ route('admin_cohort_infos_img_text_form') }}">C img & text upload</a></li>
-{{--                        <li><a class="" href="{{ route('admin_cohorts_img_and_text') }}">C img update</a></li>--}}
+{{--     <li><a class="" href="{{ route('admin_cohorts_img_and_text') }}">C img update</a></li>--}}
 
                     </ul>
                 </li>
+
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
 
@@ -399,11 +392,10 @@
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="{{route('admin_Alumni_Association_image')}}">AA updatetable</a></li>
-                    </ul>
-                    <ul class="sub">
+                        <li><a class="" href="{{route('admin_Alumni_Association')}}">AA updatetable</a></li>
                         <li><a class="" href="{{route('admin_Alumni_Association_image')}}">AA image</a></li>
                     </ul>
+                    
                   
                 </li>
 

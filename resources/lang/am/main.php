@@ -41,4 +41,15 @@ return [
     // alumni_association
 
     'alumni_association'=>'Շրջանավարտների ասոցիացիա',
+
+    // READ MORE
+
+    'reade_more'=>'Կարդալ ավելին',
+
+
+    // News
+    'news'=>'Նորություն',
+
+    //Partners
+    'partners'=>'Գործընկերները',
 ];

@@ -20,7 +20,11 @@ use App\Http\Controllers\AdminCohortController;
 use App\Http\Controllers\AdminCohortsimgandtextController;
 use App\Http\Controllers\SteeringCommitteeImageUploadController;
 use App\Http\Controllers\AAimageController;
-
+use App\Http\Controllers\AdminNewsController;
+use App\Http\Controllers\AdminaboutController;
+use App\Http\Controllers\AffiliatesController;
+use App\Http\Controllers\PartnoreController;
+use App\Http\Controllers\AdminaboutindexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -111,3 +115,40 @@ Route::post('/admin/admin_Alumni_Association_updated',[AlumniAssociationUpdateCo
 Route::get('/admin/admin_Alumni_Association_image',[AAimageController::class,'index'])->name('admin_Alumni_Association_image');
 Route::post('/admin/admin_Alumni_Association_image_insert',[AAimageController::class,'insert'])->name('admin_Alumni_Association_image_insert');
 Route::post('/admin/admin_Alumni_Association_image_delete',[AAimageController::class,'delete'])->name('admin_Alumni_Association_image_delete');
+
+
+// news admin route
+Route::get('/admin/admin_news_and_events',[AdminNewsController::class,'index'])->name('admin_news_and_events');
+Route::get('/admin/admin_news_and_events_add',[AdminNewsController::class,'insert_page'])->name('admin_news_and_events_add');
+Route::post('/admin/admin_news_and_events_add',[AdminNewsController::class,'insert'])->name('admin_news_and_events_add');
+Route::get('/admin/admin_news_and_events_delete/{id}',[AdminNewsController::class,'delete'])->name('admin_news_and_events_delete');
+Route::get('/admin/admin_news_edit/{id}',[AdminNewsController::class,'edit'])->name('admin_news_edit');
+
+Route::post('/admin/admin_news_edit',[AdminNewsController::class,'update'])->name('admin_news_update');
+
+
+// about admin route
+
+Route::get('/admin/admin_about_edit',[AdminaboutController::class,'index'])->name('admin_about_edit');
+Route::post('/admin/admin_about_edit',[AdminaboutController::class,'update'])->name('admin_about_update');
+
+// about affiliates route
+
+Route::get('/admin/admin_affiliates_add',[AffiliatesController::class,'index'])->name('admin_affiliates_add');
+Route::post('/admin/admin_affiliates_add',[AffiliatesController::class,'add'])->name('admin_affiliates_add');
+Route::get('/admin/admin_affiliates_edit/{id}',[AffiliatesController::class,'edit'])->name('admin_affiliates_edit');
+Route::post('/admin/admin_affiliates_update/{id}',[AffiliatesController::class,'update'])->name('admin_affiliates_update');
+Route::get('/admin/admin_affiliates_delete/{id}',[AffiliatesController::class,'delete'])->name('admin_affiliates_delete');
+
+// about partnore route
+
+Route::get('/admin/admin_partnore_add',[PartnoreController::class,'index'])->name('admin_partnore_add');
+Route::post('/admin/admin_partnore_add',[PartnoreController::class,'add'])->name('admin_partnore_add');
+Route::get('/admin/admin_partnore_edit/{id}',[PartnoreController::class,'edit'])->name('admin_partnore_edit');
+Route::post('/admin/admin_partnore_update/{id}',[PartnoreController::class,'update'])->name('admin_partnore_update');
+Route::get('/admin/admin_partnore_delete/{id}',[PartnoreController::class,'delete'])->name('admin_partnore_delete');
+
+// about index admin route
+
+Route::get('/admin/admin_aboutindex_edit',[AdminaboutindexController::class,'index'])->name('admin_aboutindex_edit');
+Route::post('/admin/admin_aboutindex_edit',[AdminaboutindexController::class,'update'])->name('admin_aboutindex_edit');

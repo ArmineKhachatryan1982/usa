@@ -18,9 +18,12 @@ class CreateNewsAndEventsTable extends Migration
             $table->string('date');
             $table->string('title_text_am');
             $table->string('title_text_en');
-            $table->string('text_am');
-            $table->string('text_en');
-            $table->string('img_name');
+            $table->string('index_text_am');
+            $table->string('index_text_en');
+            $table->longText('text_am');
+            $table->longText('text_en');
+            $table->string('index_img_name');
+            $table->string('page_img_name');
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });

@@ -38,4 +38,12 @@ return [
      // alumni_association
 
     'alumni_association'=>'Alumni Association',
+
+     // READ MORE
+
+    'reade_more'=>'READ MORE',
+    // News
+    'news'=>'News',
+    //Partners
+    'partners'=>'Partners',
 ];
