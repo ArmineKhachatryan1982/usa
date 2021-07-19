@@ -17,6 +17,14 @@ class CreateCohortsTable extends Migration
             $table->id()->from(1000);
             $table->longText('text_en');
             $table->longText('text_am');
+            $table->longText('data_one_am');
+            $table->longText('data_one_en');
+            $table->longText('data_two_am');
+            $table->longText('data_two_en');
+            $table->longText('title_one_am');
+            $table->longText('title_one_en');
+            $table->longText('title_two_am');
+            $table->longText('title_two_ens');
             $table->timestamps();
         });
     }

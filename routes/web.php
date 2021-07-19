@@ -87,6 +87,10 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 });
+
+Route::post('/contactus',[ContactusController::class,'store'])->name('contactussend');
+
+
 Route::get('/admin/adminhomepageshowhomepage',[AdminhomepageController::class,'index']);
 Route::get('/admin',[HomepageshowController::class,'index'])->name('adminhomepageshow');
 
@@ -189,3 +193,8 @@ Route::get('/admin/admin_training_delete/{id}',[AdminTrainingController::class,'
 
 Route::get('/admin/admin_title',[AdminTitleController::class,'index'])->name('admin_title');
 Route::post('/admin/admin_title_update',[AdminTitleController::class,'update'])->name('admin_title_update');
+
+
+// Cohorts admin route
+
+
