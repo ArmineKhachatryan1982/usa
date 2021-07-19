@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\About_us;
 
 class AboutController extends Controller
 {
@@ -14,7 +15,11 @@ class AboutController extends Controller
     public function index($locale)
     {
         app()->setLocale($locale);
-        return view('pages.about');
+
+        $data = About_us::where('id','1000')->first();
+
+
+        return view('pages.about',['data'=>$data]);
     }
 
     /**

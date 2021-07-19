@@ -18,7 +18,7 @@ return [
     'about_us' => 'Մեր մասին',
     'our_partners'=>'Մեր գործընկերները',
     'training_programs'=>'Դասընթացների ծրագրեր',
-    'news_media'=>'Նորություններ և մեդիա',
+    'news_media'=>'Նորություններ',
     'cohorts'=>'Համախոհներ',
     'steering_committee' => 'Եկվորների կոմիտե',
     'alumni_association' => 'Շրջանավարտների ասոցիացիա',
@@ -52,4 +52,8 @@ return [
 
     //Partners
     'partners'=>'Գործընկերները',
+    //About US
+    'about_us'=>'Մեր մասին',
+    //Our Affiliates
+    'our_affiliates'=>'Մեր դուստր ձեռնարկությունները',
 ];

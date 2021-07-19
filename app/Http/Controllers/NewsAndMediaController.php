@@ -18,6 +18,7 @@ class NewsAndMediaController extends Controller
 
 
         $employees=News_and_event::paginate(9);
+      
         return view('pages.news',compact('employees'));
     }
 
@@ -48,9 +49,15 @@ class NewsAndMediaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($locale,$id)
     {
-        //
+        app()->setLocale($locale);
+
+        $data=News_and_event::where('id',$id)->first();
+        
+        $employees = News_and_event::where('status','0')->skip(0)->take(3)->get();
+        
+        return view('pages.news_&_media',['employees'=>$employees,'data'=>$data]);
     }
 
     /**

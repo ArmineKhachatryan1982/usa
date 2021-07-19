@@ -50,9 +50,15 @@ class OurPartnersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($locale,$id)
     {
-        //
+        app()->setLocale($locale);
+
+        $data = Partners::where('id',$id)->first();
+       
+        $employees = Partners::whereNotNull('id')->skip(0)->take(2)->get();
+        
+        return view('pages.partner',['employees'=>$employees,'data'=>$data]);
     }
 
     /**

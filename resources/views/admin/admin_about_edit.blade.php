@@ -45,27 +45,23 @@
                         <div class="form-group">
                             <label for="img_one">Title am</label>
                             <input type="file" class="form-control" id="img_one"  name="img_one"  >
-                            <img src="img/about/{{$data->img_one}}">
+                            <img src="{{ asset('img/about') }}/{{$data->img_one}}">
                         </div>
                         <div class="form-group">
                             <label for="img_two">Title am</label>
                             <input type="file" class="form-control" id="img_two"  name="img_two"  >
-                            <img src="img/about/{{$data->img_two}}">
+                            <img src="{{ asset('img/about') }}/{{$data->img_two}}">
                         </div>
                         <div class="form-group">
                             <label for="img_tree">Title am</label>
                             <input type="file" class="form-control" id="img_tree"  name="img_tree"  >
-                            <img src="img/about/{{$data->img_tree}}">
+                            <img src="{{ asset('img/about') }}/{{$data->img_tree}}">
                         </div>
                           <div class="form-group">
                             <label for="img_tree">Title am</label>
                             <input type="file" class="form-control" id="img_fore"  name="img_fore"  >
-                            <img src="img/about/{{$data->img_fore}}">
+                            <img src="{{ asset('img/about') }}/{{$data->img_fore}}">
                         </div>
-
-                      
-
-                      
                         <button type="submit" class="btn btn-primary">Update About</button>
                     </form>
                 </div>
