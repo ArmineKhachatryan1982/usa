@@ -143,7 +143,7 @@
             </div>
         </div>
     </div>
-    <div class=" d-flex justify-content-center text-center p-2 footer_bottom"><p class="mx-1">All rights reserved by </p><span >WebEx Technologies</span></div>
+    <div class=" d-flex justify-content-center text-center p-2 footer_bottom"><p class="mx-1">All rights reserved by </p><span ><a href="https://web-ex.tech/">WebEx Technologies</a>WebEx Technologies</span></div>
 
 </footer>
 {{--footer start--}}

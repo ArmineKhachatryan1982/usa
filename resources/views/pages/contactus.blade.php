@@ -7,7 +7,8 @@
         <div class="row info_map">
             <div class="col-md-6  info_side">
                 <h1>@lang('main.contacts')</h1>
-
+                <form method="POST" action="{{ route('contactussend') }}" enctype="multipart/form-data">
+                @csrf
                  <div class="mb-3">
                     <input type="text"  name='name' class="form-control invalid" id="exampleFormControlInput1"
                         placeholder="@lang('main.name_surname')">
@@ -26,7 +27,7 @@
                         placeholder="@lang('main.message')"></textarea>
                 </div>
                 <input class="btn btn_send" type="submit" value="Send">
-
+                </form>
 
             </div>
             

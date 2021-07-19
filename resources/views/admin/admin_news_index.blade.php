@@ -11,15 +11,7 @@
             </tr>
             </thead>
             <tbody>
- <!--                 $table->string('date');
-            $table->string('');
-            $table->string('');
-            $table->string('');
-            $table->string('');
-            $table->longText('');
-            $table->longText('');
-            $table->string('');
-            $table->string(''); -->
+
             @foreach($data as $items)
                 <tr>
                     <td>{{ $items->id }}</td>

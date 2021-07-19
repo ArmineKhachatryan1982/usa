@@ -37,7 +37,7 @@ class ContactusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Redirect()->back();
     }
 
     /**

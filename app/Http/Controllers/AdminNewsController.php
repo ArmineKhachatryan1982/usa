@@ -13,7 +13,7 @@ class AdminNewsController extends Controller
 
     $data = News_and_event::all();
 
-          return view('admin.admin_news_index',['data'=>$data]);
+    return view('admin.admin_news_index',['data'=>$data]);
     }
 
 
@@ -86,8 +86,6 @@ class AdminNewsController extends Controller
             $file->move(public_path('img/img_news1'),$index_img_name);
             $updateimg = News_and_event::where('id',$request->id)->update(['index_img_name'=>$index_img_name]);
         }
-
-
    if(!empty($request->hasfile('page_img_name'))){
             $file = $request->file('page_img_name');
             $page_img_name=$file->getClientOriginalName();
