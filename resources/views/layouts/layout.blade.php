@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fetep Armenia</title>
+    <title>Fetp Armenia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- font icon -->
     <link href="{{ asset('css/elegant-icons-style.css') }}" rel="stylesheet" />
@@ -30,24 +30,23 @@
         <div class="header_first">
             <div class="container">
                 <div class="d-flex  justify-content-between align-items-center  search_section">
-                    <div  id="logo"></div>
+                    <div  id="logo" onclick="window.location.href = '/{{app()->getLocale()}}';"></div>
                     <div class="d-flex lang">
                         <ul class="d-flex" >
                            <?php $pathe =explode("/", request()->path());
-                           if(request()->path() == "am" or request()->path() == "en")
-                           {
-                               $patham = "am";
-                               $pathen = "en";
-                           }else{
-                               $patham = "am/".$pathe[1];
-                               $pathen = "en/".$pathe[1];
-                           }
-                           ?>
 
-
-                           <li class="d-inline p-2"><a href="{{ asset('/') }}<?php echo $patham?>
+                               if(app()->getLocale() == "am"){
+                                $patham = str_replace("en","am",request()->path());
+                                $pathen = str_replace("am","en",request()->path());
+                               }
+                               if(app()->getLocale() == "en"){
+                                $patham = str_replace("en","am",request()->path());
+                                $pathen = str_replace("am","en",request()->path());
+                               }
+                                ?>
+                           <li class="d-inline p-2"><a href="{{ asset('/') }}<?php echo $patham;?>
                            "class=" text-white">ARM</a></li>
-                           <li class="d-inline p-2"><a href="{{ asset('/') }}<?php echo $pathen?>" class=" text-white">ENG</a></li>
+                           <li class="d-inline p-2"><a href="{{ asset('/') }}<?php echo $pathen;?>" class=" text-white">ENG</a></li>
                        </ul>
                        <div class="position-relative search_div ">
                         <input class="form-control " type="search"  aria-label="Search">
@@ -82,10 +81,10 @@
                             </li>
 
                             <li class="nav-item text-center">
-                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/training_program') }}">@lang('main.training_programs')</a>
+                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/training_programs') }}">@lang('main.training_programs')</a>
                             </li>
                             <li class="nav-item text-center">
-                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/news&media') }}">@lang('main.news_media')</a>
+                                <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/news') }}">@lang('main.news_media')</a>
                             </li>
                             <li class="nav-item text-center">
                                 <a class="nav-link text-white" href="{{ asset(app()->getLocale().'/cohorts') }}">@lang('main.cohorts')</a>

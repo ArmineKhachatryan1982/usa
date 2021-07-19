@@ -53,7 +53,7 @@
         </div>
 
         <!--logo start-->
-        <a href="{{ asset('/') }}" class="logo">Fetep <span class="lite">Armenia</span></a>
+        <a href="{{ asset('/') }}" class="logo">Fetp <span class="lite">Armenia</span></a>
         <!--logo end-->
 
         <div class="nav search-row" id="top_menu">
@@ -320,13 +320,26 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
+
+                 <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <span>Training</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="{{route('admin_training_add')}}">Training</a></li> 
+                        <li><a class="" href="{{route('admin_training_create')}}">Create Training</a></li> 
+                    </ul>
+                </li>
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
                         <span>Our Partners</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="{{route('admin_partnore_add')}}">Our Partners</a></li> 
+                        <li><a class="" href="{{route('admin_partnore_add')}}">Our Partners</a></li>
+                        <li><a class="" href="{{route('admin_training_create')}}">Create Partners</a></li> 
+                        
                     </ul>
                 </li>
                 <li class="sub-menu">
@@ -351,13 +364,33 @@
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
 
-                        <span>New and events</span>
+                        <span>New</span>
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
                         <li><a class="" href="{{route('admin_news_and_events')}}">News</a></li>
                         <li><a class="" href="{{route('admin_news_and_events_add')}}">Create News</a></li>
                        
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <span>Contact</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="{{route('admin_conatct_edit')}}">Contact </a></li> 
+                        
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <span>Title</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="{{route('admin_title')}}">Title </a></li> 
+                        
                     </ul>
                 </li>
                 <li class="sub-menu">
@@ -399,7 +432,7 @@
                   
                 </li>
 
-                <li class="sub-menu">
+               <!--  <li class="sub-menu">
                     <a href="javascript:;" class="">
                         <i class="icon_documents_alt"></i>
                         <span>Home page</span>
@@ -411,7 +444,7 @@
                         <li><a class="" href="">Alumni Association </a></li>
                         <li><a class="" href="404.html">404 Error</a></li>
                     </ul>
-                </li>
+                </li> -->
 
             </ul>
             <!-- sidebar menu end-->
@@ -430,7 +463,7 @@
                   Licensing information: https://bootstrapmade.com/license/
                   Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
                 -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            <!--   //  Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
             </div>
         </div>
     </section>

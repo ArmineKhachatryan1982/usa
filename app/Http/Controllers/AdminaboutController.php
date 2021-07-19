@@ -26,25 +26,25 @@ class AdminaboutController extends Controller
       if(!empty($request->hasfile('img_one'))){
             $file = $request->file('img_one');
             $img_one=$file->getClientOriginalName();
-            $file->move(public_path('img/about'),$index_img_name);
+            $file->move(public_path('img/about'),$img_one);
             $updateimg = About_us::where('id',$request->id)->update(['img_one'=>$img_one]);
         }
          if(!empty($request->hasfile('img_two'))){
             $file = $request->file('img_two');
             $img_two=$file->getClientOriginalName();
-            $file->move(public_path('img/about'),$index_img_name);
+            $file->move(public_path('img/about'),$img_two);
             $updateimg = About_us::where('id',$request->id)->update(['img_two'=>$img_two]);
         }
          if(!empty($request->hasfile('img_tree'))){
             $file = $request->file('img_tree');
             $img_tree=$file->getClientOriginalName();
-            $file->move(public_path('img/about'),$index_img_name);
+            $file->move(public_path('img/about'),$img_tree);
             $updateimg = About_us::where('id',$request->id)->update(['img_tree'=>$img_tree]);
         }
          if(!empty($request->hasfile('img_fore'))){
             $file = $request->file('img_fore');
             $img_fore=$file->getClientOriginalName();
-            $file->move(public_path('img/about'),$index_img_name);
+            $file->move(public_path('img/about'),$img_fore);
             $updateimg = About_us::where('id',$request->id)->update(['img_fore'=>$img_fore]);
         }
          $data = About_us::where('id','1000')->first();

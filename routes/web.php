@@ -25,6 +25,9 @@ use App\Http\Controllers\AdminaboutController;
 use App\Http\Controllers\AffiliatesController;
 use App\Http\Controllers\PartnoreController;
 use App\Http\Controllers\AdminaboutindexController;
+use App\Http\Controllers\AdminTrainingController;
+use App\Http\Controllers\AdmincontactController;
+use App\Http\Controllers\AdminTitleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +42,17 @@ use App\Http\Controllers\AdminaboutindexController;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::get('/clear-cache', function() {
+
+        $run = Artisan::call('config:clear');
+
+        $run = Artisan::call('cache:clear');
+
+        $run = Artisan::call('config:cache');
+
+        return 'FINISHED';  
+
+    });
 
 Auth::routes();
 
@@ -54,12 +68,16 @@ Route::prefix('{locale?}')->name('locale.')->group(function (){
     Route::get('/',[HomepageController::class,'index']);
     Route::get('/about',[AboutController::class,'index'])->name('about');
     Route::get('/our_partners',[OurPartnersController::class,'index'])->name('our_partners');
-    Route::get('/training_program',[TrainingProgramController::class,'index'])->name('training_program');
-    Route::get('/news&media',[NewsAndMediaController::class,'index'])->name('news&media');
+    Route::get('/partner/{id}',[OurPartnersController::class,'show'])->name('partners');
+    Route::get('/training_programs',[TrainingProgramController::class,'index'])->name('training_program');
+    Route::get('/news',[NewsAndMediaController::class,'index'])->name('news&media');
+    Route::get('/news/{id}',[NewsAndMediaController::class,'show'])->name('news');
+    
     Route::get('/cohorts',[CohortsController::class,'index'])->name('')->name('cohorts');
     Route::get('/steeringcommittee',[SteeringcommitteeController::class,'index'])->name('steeringcommittee');
     Route::get('/aluminiassciation',[AluminiassciationController::class,'index'])->name('aluminiassciation');
     Route::get('/contactus',[ContactusController::class,'index'])->name('contactus');
+
 });
 
 
@@ -143,12 +161,31 @@ Route::get('/admin/admin_affiliates_delete/{id}',[AffiliatesController::class,'d
 // about partnore route
 
 Route::get('/admin/admin_partnore_add',[PartnoreController::class,'index'])->name('admin_partnore_add');
+Route::get('/admin/admin_partnore_add_page',[PartnoreController::class,'create'])->name('admin_partnore_add_page');
 Route::post('/admin/admin_partnore_add',[PartnoreController::class,'add'])->name('admin_partnore_add');
 Route::get('/admin/admin_partnore_edit/{id}',[PartnoreController::class,'edit'])->name('admin_partnore_edit');
-Route::post('/admin/admin_partnore_update/{id}',[PartnoreController::class,'update'])->name('admin_partnore_update');
+Route::post('/admin/admin_partnore_update',[PartnoreController::class,'update'])->name('admin_partnore_update');
 Route::get('/admin/admin_partnore_delete/{id}',[PartnoreController::class,'delete'])->name('admin_partnore_delete');
 
 // about index admin route
-
 Route::get('/admin/admin_aboutindex_edit',[AdminaboutindexController::class,'index'])->name('admin_aboutindex_edit');
 Route::post('/admin/admin_aboutindex_edit',[AdminaboutindexController::class,'update'])->name('admin_aboutindex_edit');
+
+// countact admin route
+Route::get('/admin/admin_conatct_edit',[AdmincontactController::class,'index'])->name('admin_conatct_edit');
+Route::post('/admin/admin_conatct_update',[AdmincontactController::class,'update'])->name('admin_conatct_update');
+
+
+// about Training Programs route
+
+Route::get('/admin/admin_training_add',[AdminTrainingController::class,'index'])->name('admin_training_add');
+Route::get('/admin/admin_training_create',[AdminTrainingController::class,'create'])->name('admin_training_create');
+Route::post('/admin/admin_training_add',[AdminTrainingController::class,'add'])->name('admin_training_add');
+Route::get('/admin/admin_training_edit/{id}',[AdminTrainingController::class,'edit'])->name('admin_training_edit');
+Route::post('/admin/admin_training_update',[AdminTrainingController::class,'update'])->name('admin_training_update');
+Route::get('/admin/admin_training_delete/{id}',[AdminTrainingController::class,'delete'])->name('admin_training_delete');
+
+// title admin route
+
+Route::get('/admin/admin_title',[AdminTitleController::class,'index'])->name('admin_title');
+Route::post('/admin/admin_title_update',[AdminTitleController::class,'update'])->name('admin_title_update');

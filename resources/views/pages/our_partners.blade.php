@@ -17,11 +17,14 @@
                  @if(app()->getLocale() == "en")
                  <h4 class="partner_name">{{$data->name_en}}</h4>
                 <p class="partner_description">{{$data->min_text_en}}</p>
+                 <button class="read_more"><a href="{{ asset('en/partner') }}/{{$data->id}}" class="read_more"><span>@lang('main.reade_more')</span> </a></button>
                 @else
                   <h4 class="partner_name">{{$data->name_am}}</h4>
                 <p class="partner_description">{{$data->min_text_am}}</p>
+                 <button class="read_more"><a href="{{ asset('am/partner') }}/{{$data->id}}" class="read_more"><span>@lang('main.reade_more')</span> </a></button>
                 @endif
-                <button class="read_more">@lang('main.reade_more')</button>
+
+               
             </div>
         </div>
         @endforeach

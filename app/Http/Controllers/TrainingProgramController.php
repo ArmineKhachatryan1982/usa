@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Treyning;
+use App\Models\Title;
 
 class TrainingProgramController extends Controller
 {
@@ -14,7 +16,15 @@ class TrainingProgramController extends Controller
     public function index($locale)
     {
         app()->setLocale($locale);
-        return view('pages.training_program');
+
+       
+        $employees=Treyning::paginate(3);
+
+        
+        $Title = Title::where('id','1001')->first();
+
+
+        return view('pages.training_program',compact('employees','Title'));
     }
 
     /**

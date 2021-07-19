@@ -18,7 +18,7 @@ return [
     'about_us' => 'About',
     'our_partners'=>'Our Partners',
     'training_programs'=>'Training Programs',
-    'news_media'=>'News & Media',
+    'news_media'=>'News',
     'cohorts'=>'Cohorts',
     'steering_committee' => 'Steering Committee',
     'alumni_association' => 'Alumni Association',
@@ -34,16 +34,17 @@ return [
     'email'=>'Email',
     'message'=>'Message',
     'send'=>'Send',
-
      // alumni_association
-
     'alumni_association'=>'Alumni Association',
-
      // READ MORE
-
     'reade_more'=>'READ MORE',
     // News
     'news'=>'News',
     //Partners
     'partners'=>'Partners',
+     //About US
+    'about_us'=>'About US',
+    //Our Affiliates
+    'our_affiliates'=>'Our Affiliates',
+  
 ];

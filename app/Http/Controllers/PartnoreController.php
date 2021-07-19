@@ -58,15 +58,51 @@ class PartnoreController extends Controller
          return redirect()->route('admin_partnore_add');
      
     }
-     public function edit()
+     public function edit($id)
     {
+         $data = Partners::where('id',$id)->first();
+
+        return view('admin.admin_partnore_edith', ['data'=>$data]);
+    }
+     public function update(Request $request)
+    {   
+         if(!empty($request->hasfile('img_partner'))){
+            $file = $request->file('img_partner');
+            $img_partner=$file->getClientOriginalName();
+            $file->move(public_path('img/img_partners'),$img_partner);
+            $updateimg = Partners::where('id',$request->id)->update(['img_partner'=>$img_partner]);
+        }
+         if(!empty($request->hasfile('compni_logo'))){
+            $file = $request->file('compni_logo');
+            $compni_logo=$file->getClientOriginalName();
+            $file->move(public_path('img/img_partners'),$compni_logo);
+            $updateimg = Partners::where('id',$request->id)->update(['compni_logo'=>$compni_logo]);
+        }
+           
+         $update = Partners::where('id',$request->id)->update([
+        'name_am'=>$request['name_am'],
+        'name_en'=>$request['name_en'],
+        'min_text_en'=>$request['min_text_en'],
+        'min_text_am'=>$request['min_text_am'],
+        'des_am'=>$request['des_am'],
+        'des_en'=>$request['des_en'],
+        'text_one_am'=>$request['text_one_am'],
+        'text_one_en'=>$request['text_one_en'],
+        'text_two_am'=>$request['text_two_am'],
+        'text_two_en'=>$request['text_two_en'],
+        'text_tree_am'=>$request['text_tree_am'],
+        'text_three_en'=>$request['text_three_en'],
+        'name_en'=>$request['name_en'],
+             ]); 
+        
          
         return redirect()->route('admin_partnore_add');
     }
-     public function update()
+
+     public function create()
     {
-         
-        return redirect()->route('admin_partnore_add');
+
+       return view('admin.admin_partnore_create_page');
     }
      public function delete($id)
     {
