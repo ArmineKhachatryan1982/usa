@@ -59,6 +59,17 @@
                     </form>
                 </div>
             </section>
+             <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+              <script>
+                     CKEDITOR.replace('img_text_am')
+                     CKEDITOR.replace('img_text_en')
+                     CKEDITOR.replace('title_en')
+                     CKEDITOR.replace('title_am')
+                     CKEDITOR.replace('text_one_am')
+                     CKEDITOR.replace('text_one_en')
+                     CKEDITOR.replace('text_two_am')
+                     CKEDITOR.replace('text_two_en')
+                </script>
         </div>
 
     </section>

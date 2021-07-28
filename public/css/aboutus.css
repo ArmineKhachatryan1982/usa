@@ -1,13 +1,10 @@
 
-.aboutus_first>.container{
-    /*border:1px solid blue*/
-}
+
 .aboutus{
-    /*border:1px solid blue;*/
+
     position:relative;
     min-height:500px;
-    /*border:1px solid green;*/
-}
+   }
 .aboutus .aboutus_border{
     width: 300px;
     height: 400px;
@@ -21,21 +18,14 @@
     background:#a09292;
 }
 .aboutus_text{
-    width: 60%;
+    width: 65%;
     height: 400px;
-    overflow:hidden;
-    /*outline:1px solid;*/
     text-indent:50px;
     text-align:justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.aboutus_second>.container{
-    /*border:1px solid green*/
-}
-.aboutus_second_text{
-    width:100%;
-    /*outline:1px solid red;*/
-    text-align:justify;
-}
+
 .aboutus_item{
     width: 30%;
     height: 230px;
@@ -43,8 +33,11 @@
 }
 @media(max-width:995px){
     .aboutus_text{
-        margin: 30px 30px 0!important;
+        margin: 30px 0  0!important;
         width:100%!important;
+    }
+    .aboutus_text>div{
+        padding-left:0!important;
     }
     .aboutus{
         justify-content:center!important;
@@ -61,11 +54,5 @@
         margin:20px auto  !important;
         justify-content:center !important
     }
-    .aboutus_text{
-        width:100% !important;
-
-    }
-    .aboutus_second_text{
-        /*margin:20px auto  !important;*/
-    }
+    
 }

@@ -63,6 +63,13 @@
                         <button type="submit" class="btn btn-primary">Update News</button>
                     </form>
                 </div>
+                 <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+                 <script>
+                     CKEDITOR.replace('index_text_am')
+                     CKEDITOR.replace('index_text_en')
+                     CKEDITOR.replace('text_am')
+                     CKEDITOR.replace('text_en')
+                </script>
             </section>
         </div>
 

@@ -88,6 +88,19 @@
                         <button type="submit" class="btn btn-primary">Update Partners</button>
                     </form>
                 </div>
+                 <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+                 <script>
+                     CKEDITOR.replace('min_text_am')
+                     CKEDITOR.replace('min_text_en')
+                     CKEDITOR.replace('des_en')
+                     CKEDITOR.replace('des_am')
+                     CKEDITOR.replace('text_one_en')
+                     CKEDITOR.replace('text_one_am')
+                     CKEDITOR.replace('text_two_en')
+                     CKEDITOR.replace('text_two_am')
+                     CKEDITOR.replace('text_three_en')
+                     CKEDITOR.replace('text_tree_am')
+                </script>
             </section>
         </div>
 

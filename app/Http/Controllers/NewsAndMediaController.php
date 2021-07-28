@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\News_and_event;
+use App\Models\Footer;
 
 class NewsAndMediaController extends Controller
 {
@@ -18,8 +19,10 @@ class NewsAndMediaController extends Controller
 
 
         $employees=News_and_event::paginate(9);
+
+        $Footer = Footer::where('id','1000')->first();
       
-        return view('pages.news',compact('employees'));
+        return view('pages.news',compact('employees','Footer'));
     }
 
     /**
@@ -54,10 +57,13 @@ class NewsAndMediaController extends Controller
         app()->setLocale($locale);
 
         $data=News_and_event::where('id',$id)->first();
+       
         
         $employees = News_and_event::where('status','0')->skip(0)->take(3)->get();
+
+        $Footer = Footer::where('id','1000')->first();
         
-        return view('pages.news_&_media',['employees'=>$employees,'data'=>$data]);
+        return view('pages.news_&_media',['employees'=>$employees,'data'=>$data,'Footer'=>$Footer]);
     }
 
     /**

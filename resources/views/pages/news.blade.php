@@ -3,68 +3,51 @@
     <link rel="stylesheet" href="{{ asset('css/news.css') }}">
 @endsection
 @section('content')
-            <section class="section_index">
-        <div class="label_news d-flex justify-content-center "><h1>@lang('main.news')</h1></div>
-        <div class="row">
-            <div class="col-sm-12 container_style">
-                <div class="container">
-
-                    
-                    <div class="row all_cards">
-
-                         @foreach($employees as $data)
-                        <div class="col-sm col-md-4 item_card" >
-                            <!-- card start-->
-                            <div class="">
-                                <div class="row" style="
-                                background-color: white;
-                                height: 490px;
-                                ">
-                                    <div class="col-sm-12 " style="
-                                    padding-right: 0px;
-                                    padding-left: 0px;">
-                                        <!-- nkar -->
-                                        <div class="calendar_style">
-                                            <p class="calendar">{{$data->date}}</p>
-                                        </div>
-                                        <img class="card-img-top" src="{{ asset('img/img_news1') }}/{{$data->index_img_name}}" alt="Card image cap">
-                                    </div>
-                                    <div class="col-sm-12">
-                                          @if(app()->getLocale() == "en")
-                                        <h5 class="card-title"> {{$data->title_text_en}} </h5>
-                                        <p class="card-text">{{$data->index_text_en}}</p>
-                                        <a href="{{ asset('en/news') }}/{{$data->id}}" class="read_more"><span>@lang('main.reade_more')</span> </a>
-
-                                        @else
-                                        <h5 class="card-title"> {{$data->title_text_am}} </h5>
-                                        <p class="card-text">{{$data->index_text_am}}</p>
-                                        <a href="{{ asset('am/news') }}/{{$data->id}}" class="read_more"><span>@lang('main.reade_more')</span> </a>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card end-->
-                        </div>
-                        @endforeach
-
-                       
-    
+    <!-- title section start -->
+        <div class="label_news text-center ">
+           
+                 <h1 >@lang('main.news')</h1>
+          
+        </div>
+        <!-- title section start -->
+        <!-- news section start -->
+       <div class="container mt-5">
+            <div class="d-flex flex-wrap  justify-content-center myrow"> 
+                @foreach($employees as $data)
+                <div class="news_item m-2">
+                    <div class="position-relative news_img">
+                        <img  class="position-absolute responsive w-100 h-100" src="{{ asset('img/img_news1') }}/{{$data->index_img_name}}">
+                     <div class="position-absolute py-2 px-4 news_date">{{$data->date}}</div>   
                     </div>
+                    @if(app()->getLocale() == "en")
+                    <div class="px-3 pt-3"><h5>{!! $data->title_text_en !!}</h5> </div>
+                    <div class="p-3 news_text">
+                        {!! $data->index_text_en !!}
+                    </div>
+                    <div class="mx-3 py-1 d-inline read_more">
+                        <a  href="{{ asset('en/news') }}/{{$data->id}}"><span>@lang('main.reade_more')</span> </a>
+                    </div>
+                    
+                    
+                    @else
+                    <div class="px-3 pt-3"><h5>{!! $data->title_text_am !!}</h5> </div>
+                    <div class="p-3 news_text">
+                        {!! $data->index_text_am !!}
+                    </div>
+                     <div class="mx-3 py-1 d-inline read_more">
+                        <a  href="{{ asset('am/news') }}/{{$data->id}}"><span>@lang('main.reade_more')</span> </a>
+                    </div>
+                    @endif
+
                 </div>
+                 @endforeach
             </div>
         </div>
-         {{-- Pagination --}}
-        <div class="d-flex justify-content-center">
+         <!-- news section start -->
+        {{-- Pagination --}}
+        <div class="d-flex justify-content-center m-3">
             {!! $employees->links() !!}
         </div>
-
-        <!-- enter main section content finish-->
-
-        <!-- enter main section content finish-->
-
-    
-        <!-- enter main section content finish-->
-    </section>
    
 
 

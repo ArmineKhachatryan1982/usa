@@ -8,18 +8,17 @@
     <section id="section_index">
         <section id="course_first">
 
-            <!-- <img src="img/img_courses4/startup-594090_1920 1.png" class="img-fluid startap_image"
-                alt="Responsive image"> -->
+            
 
             <div class=" container">
                 <div class="gradient_area ">
-                    <p class="gradient_text p-2">
-                         @if(app()->getLocale() == "en")
-                    {{$Title->training_title_en}}
+                    <div class="gradient_text p-2">
+                     @if(app()->getLocale() == "en")
+                    {!! $Title->training_title_en !!}
                     @else
                     {{$Title->training_title_am}}
                     @endif
-                    </p>
+                    </div>
                 </div>
 
 
@@ -39,33 +38,30 @@
                             <img class=" image_size" src="{{ asset('img/img_treyning')}}/{{$data->imagepath}}" alt="">
                              @if(app()->getLocale() == "en")
                             <div class="text_image">
-                              {{$data->img_text_am}} 
+                              {!! $data->img_text_en !!} 
                             </div>
                              @else
                              <div class="text_image">
-                               {{$data->img_text_en}}
+                               {!! $data->img_text_am !!}
                             </div>
                             @endif
                         </div>
                         <div class="order-1 about_courseOneText">
+                         
                              @if(app()->getLocale() == "en")
-                            <h1>{{$data->title_en}}</h1>
-                            <p>{{$data->text_one_en}}
-                                <br><br>
-                               {{$data->text_two_en}}
-                            </p>
+                            <h1>{!! $data->title_en !!}</h1>
+                            <div> {!! $data->text_one_en !!}</div>
+                            <div class="mt-2">{!! $data->text_two_en !!}</div>
                             @else
-                            <h1>{{$data->title_am}}</h1>
-                            <p>{{$data->text_one_am}}
-                                <br><br>
-                               {{$data->text_two_am}}
-                            </p>
+                            <h1>{!! $data->title_am !!}</h1>
+                            <div>{!! $data->text_one_am !!}</div>
+                            <div class="mt-2">{!! $data->text_two_am !!}</div>
                             @endif
                         </div>
                     </div>
                 </div>
             </section>
-             
+           
             @else
             <section class="about_courses">
                  <div class="d-flex flex-wrap container all_cours">
@@ -74,28 +70,24 @@
                             <img class="image_size" src="{{ asset('img/img_treyning')}}/{{$data->imagepath}}" alt="">
                             @if(app()->getLocale() == "en")
                             <div class="text_image">
-                               {{$data->img_text_am}} 
+                               {!! $data->img_text_en !!} 
                             </div>
                             @else
                             <div class="text_image">
-                               {{$data->img_text_en}}
+                               {!! $data->img_text_am !!}
                             </div>
                             @endif
 
                         </div>
                         <div class=" order-2 about_courseOneText">
                             @if(app()->getLocale() == "en")
-                            <h1>{{$data->title_en}}</h1>
-                            <p>{{$data->text_one_en}}
-                                <br><br>
-                               {{$data->text_two_en}}
-                            </p>
+                            <h1>{!! $data->title_en !!}</h1>
+                            <div>{!! $data->text_one_en !!}</div>
+                            <div class="mt-2">{!! $data->text_two_en !!}</div>
                             @else
-                            <h1>{{$data->title_am}}</h1>
-                            <p>{{$data->text_one_am}}
-                                <br><br>
-                               {{$data->text_two_am}}
-                            </p>
+                            <h1>{!! $data->title_am !!}</h1>
+                            <div>{!! $data->text_one_am !!}</div>
+                            <div class="mt-2">{!! $data->text_two_am !!}</div>
                             @endif
 
                         </div>

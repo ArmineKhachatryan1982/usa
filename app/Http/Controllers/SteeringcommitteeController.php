@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Steering_committee;
 use App\Models\Steering_img;
 use Illuminate\Http\Request;
+use App\Models\Footer;
 use Illuminate\Support\Facades\DB;
 
 class SteeringcommitteeController extends Controller
@@ -16,11 +17,14 @@ class SteeringcommitteeController extends Controller
     public function index($locale)
     {
         app()->setLocale($locale);
-         $data = Steering_committee::where('id','1000')->first();
+        
+        $data = Steering_committee::where('id','1000')->first();
 
         $steerings_img   = Steering_img::where('steering_committees_id','1000')->get();
 
-        return view('pages.steering_committee',['data'=>$data,'steerings_img'=>$steerings_img]);
+       $Footer = Footer::where('id','1000')->first();
+
+        return view('pages.steering_committee',['data'=>$data,'steerings_img'=>$steerings_img,'Footer'=>$Footer]);
 
     }
 

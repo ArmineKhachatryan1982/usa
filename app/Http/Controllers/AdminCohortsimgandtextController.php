@@ -28,7 +28,8 @@ class AdminCohortsimgandtextController extends Controller
     public function create()
 
     {
-        $cohort=DB::table('cohorts')->where('id',1000)->get();
+        $cohort=Cohort()->where('id',1000)->first();
+        dd($cohort);
 
         return view('admin.admin_cohort_infos_img_text_form',compact('cohort'));
     }
@@ -56,7 +57,7 @@ class AdminCohortsimgandtextController extends Controller
             $file->move(public_path('img/img_cohort'),$filename);
         }
         $cohort_infos_upload=New Cohort_info();
-        $cohort_infos_upload->cohorts_id=$request->cohort_infos_cohorts_id;
+        // $cohort_infos_upload->cohorts_id=$request->cohort_infos_cohorts_id;
         $cohort_infos_upload->img_url= $filename;
         $cohort_infos_upload->info_en = $request->cohorts_info_en;
         $cohort_infos_upload->info_am = $request->cohorts_info_am;
@@ -64,7 +65,7 @@ class AdminCohortsimgandtextController extends Controller
 
 
         $cohort_title=New Cohort_title();
-        $cohort_title->cohort_infos_id=$cohort_infos_upload->id;
+        // $cohort_title->cohort_infos_id=$cohort_infos_upload->id;
         $cohort_title->date_text_en = $request->cohorts_title_data_text_en;
         $cohort_title->date_text_am = $request->cohorts_title_data_text_am;
         $cohort_title->title_en = $request->title_en;

@@ -10,10 +10,10 @@
     <div class="container">
         @if(app()->getLocale() == "en")
         <h1 class="p-4 ">{{$data->title_text_en}}</h1>
-        <div class="text-align-justify section_contact_text">{{$data->text_en}}</div>
+        <div class="text-align-justify section_contact_text">{!! $data->text_en !!}</div>
         @else
-        <h1 class="p-4 ">{{$data->title_text_am}}</h1>
-        <div class="text-align-justify section_contact_text">{{$data->text_am}}</div>
+        <h1 class="p-4 ">{!!$data->title_text_am !!}</h1>
+        <div class="text-align-justify section_contact_text">{!! $data->text_am !!}</div>
         @endif
 
 
@@ -23,7 +23,7 @@
         <div class="col-sm-12 container_style">
             <div class="container">
                 <a href="#" class="see_also">
-                    <slan>See also ... </span>
+                    <span>See also ... </span>
                 </a>
                 <div class="row all_cards">
                    
@@ -48,13 +48,13 @@
                                 </div>
                                 <div class="col-sm-12">
                                    @if(app()->getLocale() == "en")
-                                        <h5 class="card-title"> {{$data->title_text_en}} </h5>
-                                        <p class="card-text">{{$data->index_text_en}}</p>
+                                        <h5 class="card-title"> {!! $data->title_text_en !!} </h5>
+                                        <p class="card-text">{!! $data->index_text_en !!}</p>
                                         <a href="{{ asset('en/news') }}/{{$data->id}}" class="read_more"><span>@lang('main.reade_more')</span> </a>
 
                                         @else
-                                        <h5 class="card-title"> {{$data->title_text_am}} </h5>
-                                        <p class="card-text">{{$data->index_text_am}}</p>
+                                        <h5 class="card-title"> {!! $data->title_text_am !!} </h5>
+                                        <p class="card-text">{!! $data->index_text_am !!}</p>
                                         <a href="{{ asset('am/news') }}/{{$data->id}}" class="read_more"><span>@lang('main.reade_more')</span> </a>
                                         @endif
                                     

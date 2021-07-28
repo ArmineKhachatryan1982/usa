@@ -28,6 +28,13 @@ use App\Http\Controllers\AdminaboutindexController;
 use App\Http\Controllers\AdminTrainingController;
 use App\Http\Controllers\AdmincontactController;
 use App\Http\Controllers\AdminTitleController;
+use App\Http\Controllers\FindeController;
+
+
+use App\Http\Controllers\AdminCohorttextinsertController;
+use App\Http\Controllers\CohortTextPagesController;
+use App\Http\Controllers\AdminCohortGroupCreateController;
+use App\Http\Controllers\AdminFooterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,18 +61,13 @@ Route::get('/clear-cache', function() {
 
     });
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// url run defult lang
 Route::get('/', function () {
           return redirect('/'.app()->getLocale());
       });
 
 Route::prefix('{locale?}')->name('locale.')->group(function (){
 
-    Route::get('/',[HomepageController::class,'index']);
+    Route::get('/',[HomepageController::class,'index'])->name('index');
     Route::get('/about',[AboutController::class,'index'])->name('about');
     Route::get('/our_partners',[OurPartnersController::class,'index'])->name('our_partners');
     Route::get('/partner/{id}',[OurPartnersController::class,'show'])->name('partners');
@@ -81,12 +83,13 @@ Route::prefix('{locale?}')->name('locale.')->group(function (){
 });
 
 
+Route::post('/finde',[FindeController::class,'index']);
+Route::post('/contactus',[ContactusController::class,'store'])->name('contactussend');
+Auth::routes();
+
+
 // role and prmishen  middleware
-Route::group(['middleware' => ['auth']], function() {
-
-
-
-});
+Route::group(['middleware' => ['auth']], function() { });
 Route::get('/admin/adminhomepageshowhomepage',[AdminhomepageController::class,'index']);
 Route::get('/admin',[HomepageshowController::class,'index'])->name('adminhomepageshow');
 
@@ -101,13 +104,31 @@ Route::post('/admin/edithomepage',[AdminhomepageupdateController::class,'update'
 
 
 // Creating new controller for  working admin panel AdminCohortController table show and update routs start
-    Route::get('/admin/admin_cohorts',[AdminCohortController::class,'index'])->name('cohort_first_text_show');
-    Route::get('admin/admin_cohorts_first_text_edit/{cohorts_id}',[AdminCohortController::class,'show'])->name('admin_cohorts_first_text_edit');
-    Route::post('admin/admin_cohorts_first_text_update',[AdminCohortController::class,'update'])->name('admin_cohorts_first_text_update');
-   // Cohorts image and text inserted route start
-    Route::get('admin/admin_cohorts_img_and_text',[AdminCohortsimgandtextController::class,'index'])->name('admin_cohorts_img_and_text');
-    Route::get('admin/admin_cohort_infos_img_text_form', [AdminCohortsimgandtextController::class,'create'])->name('admin_cohort_infos_img_text_form');
-    Route::post('admin/admin_cohort_infos_img_text_inserted',[AdminCohortsimgandtextController::class,'store'])->name('admin_cohort_infos_img_text_inserted');
+Route::get('/admin/admin_cohorts',[AdminCohortController::class,'index'])->name('cohort_first_text_show');
+Route::get('admin/admin_cohorts_first_text_edit/{cohorts_id}',[AdminCohortController::class,'show'])->name('admin_cohorts_first_text_edit');
+Route::post('admin/admin_cohorts_first_text_update',[AdminCohortController::class,'update'])->name('admin_cohorts_first_text_update');
+// Cohorts image and text inserted route start
+Route::get('admin/admin_cohorts_img_and_text',[AdminCohortsimgandtextController::class,'index'])->name('admin_cohorts_img_and_text');
+Route::get('admin/admin_cohort_infos_img_text_form', [AdminCohortsimgandtextController::class,'create'])->name('admin_cohort_infos_img_text_form');
+Route::post('admin/admin_cohort_infos_img_text_inserted',[AdminCohortsimgandtextController::class,'store'])->name('admin_cohort_infos_img_text_inserted');
+
+    
+
+
+
+    Route::get('admin/admin_cohort_text_insertform',[AdminCohorttextinsertController::class,'index'])->name('admin_cohort_text_insertform');
+    Route::post('admin/admin_cohort_text_insertform_inserted',[AdminCohorttextinsertController::class,'store'])->name('admin_cohort_text_insertform_inserted');
+
+    Route::get('admin/cohort_text_all',[CohortTextPagesController::class,'index'])->name('cohort_text_all');
+    Route::get('/admin/admin_cohort_text_edit/{id}',[CohortTextPagesController::class,'edit'])->name('admin_cohort_text_edit');
+    Route::post('/admin/admin_cohort_text_update',[CohortTextPagesController::class,'update'])->name('admin_cohort_text_update');
+    Route::get('/admin/admin_cohort_text_delete/{id}',[CohortTextPagesController::class,'delete'])->name('admin_cohort_text_delete');
+    
+    Route::get('/admin/admin_cohort_group_insertform',[AdminCohortGroupCreateController::class,'index'])->name('admin_cohort_group_create');
+    Route::post('/admin/admin_cohort_group_insertform',[AdminCohortGroupCreateController::class,'store'])->name('admin_cohort_group_insertform_inserted');
+    Route::get('/admin/admin_cohort_group_show',[AdminCohortGroupCreateController::class,'create'])->name('admin_cohort_group_show');
+    Route::get('/admin/admin_cohort_group_edit/{id}',[AdminCohortGroupCreateController::class,'edit'])->name('admin_cohort_group_edit');
+    Route::post('/admin/admin_cohort_update',[AdminCohortGroupCreateController::class,'update'])->name('admin_cohort_update_update');
     // Cohorts image and text inserted route end
 // Creating new controller for  working admin panel  AdminCohortController table show and update routs end
 
@@ -189,3 +210,21 @@ Route::get('/admin/admin_training_delete/{id}',[AdminTrainingController::class,'
 
 Route::get('/admin/admin_title',[AdminTitleController::class,'index'])->name('admin_title');
 Route::post('/admin/admin_title_update',[AdminTitleController::class,'update'])->name('admin_title_update');
+
+
+//footer admin route
+Route::get('/admin/admin_footer_update_form',[AdminFooterController::class,'index'])->name('admin_footer_update_form');
+Route::post('admin/admin_footer_update_form',[AdminFooterController::class,'update'])->name('admin_footer_update');
+Route::get('footer',[AdminFooterController::class,'create']);
+
+
+
+
+// url run defult lang
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+

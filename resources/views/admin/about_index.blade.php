@@ -1,4 +1,6 @@
 @extends('layouts.adminlayout')
+
+
 @section('content')
     <section class="wrapper">
         <div class="col-md-12">
@@ -27,15 +29,19 @@
                     </form>
                 </div>
             </section>
+             <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+            <script>    
+          
+                 CKEDITOR.replace('text_am')
+                 CKEDITOR.replace('text_en')
+             </script>
+
         </div>
 
     </section>
 
+
+
 @endsection('content')
 
-       <!-- 
-        
-        'img_one',
-        'img_two',
-        'img_tree',
-        'img_fore', -->
+     

@@ -65,12 +65,24 @@
                         <button type="submit" class="btn btn-primary">Update About</button>
                     </form>
                 </div>
+                
             </section>
+             <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+             <script>    
+          
+                 CKEDITOR.replace('paragraph_one_am')
+                 CKEDITOR.replace('paragraph_one_en')
+                 CKEDITOR.replace('paragraph_two_en')
+                 CKEDITOR.replace('paragraph_two_am')
+                 CKEDITOR.replace('paragraph_tree_am')
+                 CKEDITOR.replace('paragraph_tree_en')
+             </script>
         </div>
 
     </section>
 
 @endsection('content')
+
 
        <!-- 
         

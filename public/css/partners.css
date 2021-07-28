@@ -3,11 +3,11 @@
     background: #ffc600;
     border: none;
   }
-  .read_more{
-    margin-top: 3px;
-    height: 45px;
-    width: 130px;
-    color: white;
+  button>a{
+    color:#fff;
+  }
+   button>a:hover{
+    color:#fff;
   }
   .home_third {
     background: linear-gradient(
@@ -53,24 +53,6 @@
   .home_forth > .container {
     height: 600px;
   }
-  /* slide start */
-  .slide {
-    height: 320px;
-    width: 800px;
-    margin: 50px auto;
-    overflow: hidden;
-    border: 1px solid red;
-  }
-  .slide_1 {
-    height: 300px;
-    background: grey;
-  }
-  .slide_2 {
-    height: 300px;
-    background: grey;
-  }
-  
-  /* slide end */
   
   /* section fifth */
   .label{
@@ -87,7 +69,7 @@ letter-spacing: 0.08em;
 color: black;
   }
   .partnerses {
-    margin: 148px auto;
+    /*margin: 148px auto;*/
   }
   .partners {
     height: 290px;
@@ -138,36 +120,9 @@ color: black;
   }
   
   /* home css */
-  .footer_header {
-    width: 100%;
-    min-height: 300px;
-    background: url("../img/img_footer/map.png") #465072;
-    background-size: cover;
-  }
+ 
   
-  .footer_img.footer_img {
-    background: rgba(37, 58, 92, 0.82);
-  }
-  .footer_img > .container {
-    /* border:1px solid red */
-  }
-  .footer_news {
-    /* border:1px solid red */
-  }
-  .footer_news > div {
-    font-size: 1vw;
-  }
   
-  .footer_bottom > span {
-    color: red;
-  }
-  
-  .footer_all {
-    /* border:1px solid green */
-  }
-  .footer_contact_news > a > i {
-    font-size: 25px !important;
-  }
   @media (max-width: 1441px) {
     li > a {
       font-size: 1vw;
@@ -176,8 +131,8 @@ color: black;
   }
   @media (max-width: 1200px) {
     .search_section,
-    .navbar_nav,
-    .footer_item {
+    .navbar_nav
+    {
       width: 100% !important;
     }
   
@@ -198,17 +153,8 @@ color: black;
       margin: 20px auto !important;
       justify-content: center !important;
     }
-    .footer_contact_news {
-      /* border:1px solid blue; */
-      width: 100% !important;
-      margin: 16px !important;
-      font-size: 13px;
-      padding: 10px;
-      text-align: justify;
-    }
   
-    .footer_contact_news:nth-child(2) {
-      text-align: center;
-    }
+  
+  
   }
   

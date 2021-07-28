@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoursesTable extends Migration
+class CreateCohortGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateCoursesTable extends Migration
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
-            $table->id()->from(1000);
-            $table->string('img_index');
-            $table->longText('text_index');
+        Schema::create('cohort_groups', function (Blueprint $table) {
+            $table->id();
+            $table->string('cohort_group_en');
+            $table->string('cohort_img_name');
+            $table->string('cohort_img_text_en');
+            $table->string('cohort_img_text_am');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateCoursesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('cohort_groups');
     }
 }

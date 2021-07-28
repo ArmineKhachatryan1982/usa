@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Partners;
+use App\Models\Footer;
 
 class OurPartnersController extends Controller
 {
@@ -17,7 +18,11 @@ class OurPartnersController extends Controller
         app()->setLocale($locale);
 
         $employees=Partners::paginate(6);
-        return view('pages.our_partners',compact('employees'));
+        
+        
+        $Footer = Footer::where('id','1000')->first();
+        
+        return view('pages.our_partners',compact('employees','Footer'));
 
        
 
@@ -57,8 +62,10 @@ class OurPartnersController extends Controller
         $data = Partners::where('id',$id)->first();
        
         $employees = Partners::whereNotNull('id')->skip(0)->take(2)->get();
+
+         $Footer = Footer::where('id','1000')->first();
         
-        return view('pages.partner',['employees'=>$employees,'data'=>$data]);
+        return view('pages.partner',['employees'=>$employees,'data'=>$data,'Footer'=>$Footer]);
     }
 
     /**
