@@ -25,7 +25,7 @@
 
                     <form role="form" method="POST" action="{{route('admin_footer_update')}}" enctype="multipart/form-data">
                         @csrf
-                        <input type="text" name="id" value=" {{$data->id}}">
+                        <input type="hidden" name="id" value=" {{$data->id}}">
                         
                         <div class="form-group">
                             <label for="logo_name">logo img</label>

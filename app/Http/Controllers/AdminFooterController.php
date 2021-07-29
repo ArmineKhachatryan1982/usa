@@ -76,28 +76,35 @@ class AdminFooterController extends Controller
     public function update(Request $request)
     {
     
-
+        // dd($request);
             if($request->hasfile('logo_name')){
             $file = $request->file('logo_name');
             $logo_name=$file->getClientOriginalName();
             $file->move(public_path('img/img_header'),$logo_name);
+            $update=Footer::where('id',$request->id)->update([
+                'logo_name'=>$logo_name,
+                'phone'=>$request['phone'],
+                'email'=>$request['email'],
+                'text_am'=>$request['text_am'],
+                'text_en'=>$request['text_en'],
+    
+            ]);
+            return redirect()->back()->with('success','One record has been updated successfully');
+    
+
+
         }else
             {
-              return  redirect()->back();
+                $update=Footer::where('id',$request->id)->update([
+                    
+                    'phone'=>$request['phone'],
+                    'email'=>$request['email'],
+                    'text_am'=>$request['text_am'],
+                    'text_en'=>$request['text_en'],
+        
+                ]);
+                return redirect()->back()->with('success','One record has been updated successfully');
             }
-
-    
-        $update=Footer::where('id',$request->id)->update([
-            'logo_name'=>$logo_name,
-            'phone'=>$request['phone'],
-            'email'=>$request['email'],
-            'text_am'=>$request['text_am'],
-            'text_en'=>$request['text_en'],
-
-        ]);
-        return redirect()->back()->with('success','One record has been updated successfully');
-
-
     }
 
     /**
