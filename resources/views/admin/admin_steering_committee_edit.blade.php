@@ -17,6 +17,7 @@
                             {{ Session::get('success') }}
                         </div>
                     @endif
+
                     <form role="form" method="POST" action="{{ route('admin_steering_committee_update') }}" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden"  name='id' value="{{ $value->id }}">
@@ -50,6 +51,17 @@
                     </form>
                 </div>
             </section>
+
+             <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+             <script>    
+          
+                 CKEDITOR.replace('paragraph_one_am')
+                 CKEDITOR.replace('paragraph_one_en')
+                 CKEDITOR.replace('paragraph_two_en')
+                 CKEDITOR.replace('paragraph_two_am')
+                
+             </script>
+
         </div>
 
     </section>

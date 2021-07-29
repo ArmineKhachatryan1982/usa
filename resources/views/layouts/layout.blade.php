@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Fetp Armenia</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- font icon -->
     <link href="{{ asset('css/elegant-icons-style.css') }}" rel="stylesheet" />
@@ -15,10 +16,43 @@
     <!-- slide link start -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- slide-link end -->
 
+     <style type="text/css">
+             font-family: BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+             body{
+               /* font-family:Roboto;*/
+             }
+             .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+     </style>
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @yield('styles')
@@ -30,27 +64,63 @@
         <div class="header_first">
             <div class="container">
                 <div class="d-flex  justify-content-between align-items-center  search_section">
-                    <div  id="logo" onclick="window.location.href = '/{{app()->getLocale()}}';"></div>
+                     <div id="logo"><img id="logo" onclick="window.location.href = '/{{app()->getLocale()}}';" src="{{ asset('img/img_header') }}/{{$Footer->logo_name}}"></div> 
+                   <!--  <div  id="logo" ></div> -->
                     <div class="d-flex lang">
                         <ul class="d-flex" >
-                           <?php $pathe =explode("/", request()->path());
-
+                           <?php 
                                if(app()->getLocale() == "am"){
-                                $patham = str_replace("en","am",request()->path());
-                                $pathen = str_replace("am","en",request()->path());
+                                $patham =  $_SERVER['REQUEST_URI'];    
+                                $pathen = str_replace("/am","/en", $_SERVER['REQUEST_URI']);
                                }
                                if(app()->getLocale() == "en"){
-                                $patham = str_replace("en","am",request()->path());
-                                $pathen = str_replace("am","en",request()->path());
+                                $patham = str_replace("/en","/am", $_SERVER['REQUEST_URI']);
+                                $pathen = $_SERVER['REQUEST_URI'];
                                }
                                 ?>
-                           <li class="d-inline p-2"><a href="{{ asset('/') }}<?php echo $patham;?>
+                           <li class="d-inline p-2"><a href="<?php echo $patham;?>
                            "class=" text-white">ARM</a></li>
-                           <li class="d-inline p-2"><a href="{{ asset('/') }}<?php echo $pathen;?>" class=" text-white">ENG</a></li>
+                           <li class="d-inline p-2"><a href="<?php echo $pathen;?>" class=" text-white">ENG</a></li>
                        </ul>
                        <div class="position-relative search_div ">
-                        <input class="form-control " type="search"  aria-label="Search">
-                        <img class="p-1" src="{{ asset('img/img_footer/Vector.jpg') }}">
+                        <input class="form-control " oninput="finde(this.value)" type="search" id="Search" list="browsers" name="browser"  aria-label="Search">
+                        <div class="dropdown-content" id="browsers">
+                            
+                        </div>
+                        <img class="py-1 pl-2" id="Searchimg" src="{{ asset('img/img_footer/Vector.jpg') }}">
+                   <script type="text/javascript">
+                   
+                    function finde(finde){
+                    var doNotShow= document.getElementById('Searchimg');
+                    var search= document.getElementById("Search").value;
+                     console.log(search.length);
+                     if(search.length > 0){
+                         doNotShow.style.display = 'none';
+                         document.getElementById("browsers").style.display = 'none';
+                     } else{
+                         doNotShow.style.display = 'block';
+                     }
+                        var k ="{{ csrf_token() }}";
+                    $.ajaxSetup({
+                            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});$.ajax({type:'POST',url:"/finde",data:{_token:k,finde:finde},success: function(data,id){
+                                if(data ){
+                                     if(search.length > 0){
+                                    document.getElementById("browsers").style.display ='block';
+                                    document.getElementById("browsers").innerHTML =data;
+                                    console.log(data);
+                                }else{
+                                    document.getElementById("browsers").style.display ='none';
+                                }
+                                }
+
+                            }
+                        });
+                  }
+                   </script>     
+                 
+                  
+              
+                  
                     </div>
                 </div>
             </div>
@@ -115,38 +185,8 @@
     <!--  main section content finish-->
 </section>
 {{--footer start--}}
-<footer>
-    <div class="footer_header">
-        <div class="w-100  footer_img">
-            <div class="d-flex flex-wrap pt-5 container">
-
-                <div class="w-50 px-5 footer_contact_news">
-                    <div  id="logo"></div>
-                    <p class="text-white   text-justify">@lang('main.footer_contact_news')</p>
-                </div>
-                <div class="d-flex flex-column    px-3 footer_contact_news">
-                    <h3 class="text-white">Navigation</h3>
-                    <a class=" text-white mt-4" href="{{ asset( app()->getLocale().'/about') }}">@lang('main.about_us')</a>
-                    <a class=" text-white" href="{{ asset(app()->getLocale().'/our_partners') }}">@lang('main.our_partners')</a>
-                    <a class=" text-white" href="{{ asset(app()->getLocale().'/training_program') }}">@lang('main.training_programs')</a>
-                    <a class=" text-white" href="{{ asset(app()->getLocale().'/news&media') }}">@lang('main.news_media')</a>
-                    <a class=" text-white" href="{{ asset(app()->getLocale().'/cohorts') }}">@lang('main.cohorts')</a>
-                    <a class=" text-white" href="{{ asset(app()->getLocale().'/steeringcommittee') }}">@lang('main.steering_committee')</a>
-                    <a class=" text-white" href="{{ asset(app()->getLocale().'/aluminiassciation') }}">@lang('main.alumni_association')</a>
-
-                    <a class=" text-white" href="{{ asset(app()->getLocale().'/contactus') }}">@lang('main.contacts_us')</a>
-                </div>
-                <div class=" d-flex flex-column  w-25 pt-5  footer_contact_news">
-                    <a href="#" class="p-  mt-4  text-white"><i class="fa fa-phone mr-3"></i>875-856-856</a>
-                    <a href="#" class="p-1  text-white"><i class="fa fa-envelope mr-3"></i>@lang('main.footer_mail')</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class=" d-flex justify-content-center text-center p-2 footer_bottom"><p class="mx-1">All rights reserved by </p><span >WebEx Technologies</span></div>
-
-</footer>
-{{--footer start--}}
+@include('layouts.footer')
+{{--footer end--}}
 
 </body>
 </html>

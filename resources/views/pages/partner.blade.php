@@ -3,22 +3,8 @@
     <link rel="stylesheet" href="{{ asset('css/open_partner.css') }}">
 @endsection
 @section('content')
-    <section>
-        <p class="label1 d-flex justify-content-center container ">Partners</p>
- <!-- 'name_am',
-        'name_en',
-        'min_text_en',
-        'min_text_am',
-        'img_partner',
-        'compni_logo',
-        'des_am',
-        'des_en',
-        'text_one_am',
-        'text_one_en',
-        'text_two_am',
-        'text_two_en',
-        'text_tree_am',
-        'text_three_en', -->
+    <section class="pt-3">
+        <p class="label1 d-flex justify-content-center container ">@lang('main.partners')</p>
     </section>
     <section class="container" style="border: 1px solid #ADADAD;">
         <div class="  first d-flex justify-content-center container bordering_top">
@@ -54,19 +40,16 @@
     </section>
     <!-- more partner  info start-->
 
-    <section id="section_index">
       
 
 
 
-            <!-- partner 1 -->
-            <div class="d-flex  ">
-                <div class="see_also ">
-                    <a href="#" class="see_more">
-                        <span>See also ... </span>
-                    </a>
-                </div>
-
+          <div class="container"> 
+                    <div class="my-4 see_also ">
+                        <a href="#" class="see_more">
+                            <span>See also ... </span>
+                        </a>
+                    </div>
             </div>
 
 
@@ -81,22 +64,18 @@
                 <div class="pl-3 partner_text">
                     <h4 class="partner_name">{{$data->name_en}}</h4>
                     <p class="partner_description">{{$data->min_text_en}}</p>
-                     <button class="read_more"><a href="{{ asset('en/partner') }}/{{$data->id}}" class="read_more"><span>@lang('main.reade_more')</span> </a></button>
+                     <button class=" p-2 read_more"><a href="{{ asset('en/partner') }}/{{$data->id}}" class="text-white read_more"><span>@lang('main.reade_more')</span> </a></button>
                 </div>
                 @else
                 <div class="pl-3 partner_text">
                     <h4 class="partner_name">{{$data->name_am}}</h4>
                     <p class="partner_description">{{$data->min_text_am}}</p>
-                     <button class="read_more"><a href="{{ asset('am/partner') }}/{{$data->id}}" class="read_more"><span>@lang('main.reade_more')</span> </a></button>
+                     <button class=" p-2 read_more"><a  href="{{ asset('am/partner') }}/{{$data->id}}" class="read_more text-white"><span>@lang('main.reade_more')</span> </a></button>
                 </div>
                 @endif
 
             </div>
 
             @endforeach
-        
-  
-        
-    </section>
     <!-- more partner  info end-->
 @endsection('content')

@@ -15,7 +15,6 @@
                             <input type="file" class="form-control" id="imagepath"  name="imagepath">
                             <img src="{{ asset('img/img_treyning') }}/{{$data->imagepath}} ">
                         </div>
-                       
                         <div class="form-group">
                             <label for="img_text_am">Img text am</label>
                             <input type="img_text_am" class="form-control" id="img_text_am"  name="img_text_am" value="{{$data->img_text_am}}" required>
@@ -59,8 +58,18 @@
                         <button type="submit" class="btn btn-primary">Update Training</button>
                     </form>
                 </div>
+                  <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+                  <script>
+                    CKEDITOR.replace('title_en')
+                    CKEDITOR.replace('title_am')
+                    CKEDITOR.replace('text_one_am')
+                    CKEDITOR.replace('text_one_en')
+                    CKEDITOR.replace('text_two_am')
+                    CKEDITOR.replace('text_two_en')
+                  </script>
             </section>
         </div>
+
 
     </section>
 

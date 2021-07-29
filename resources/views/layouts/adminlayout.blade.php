@@ -73,7 +73,7 @@
             <ul class="nav pull-right top-menu">
 
                 <!-- task notificatoin start -->
-                <li id="task_notificatoin_bar" class="dropdown">
+                <li id="task_notificatoin_bar" class="dropdown" style="display: none;">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <i class="icon-task-l"></i>
                         <span class="badge bg-important">6</span>
@@ -158,7 +158,7 @@
                 </li>
                 <!-- task notificatoin end -->
                 <!-- inbox notificatoin start-->
-                <li id="mail_notificatoin_bar" class="dropdown">
+                <li id="mail_notificatoin_bar" class="dropdown" style="display: none;">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <i class="icon-envelope-l"></i>
                         <span class="badge bg-important">5</span>
@@ -223,7 +223,7 @@
                 </li>
                 <!-- inbox notificatoin end -->
                 <!-- alert notification start-->
-                <li id="alert_notificatoin_bar" class="dropdown">
+                <li id="alert_notificatoin_bar" class="dropdown" style="display: none;">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
 
                         <i class="icon-bell-l"></i>
@@ -272,33 +272,26 @@
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <img alt="admin" src="img/avatar1_small.jpg">
                             </span>
-                        <span class="username">Jenifer Smith</span>
+                        <span class="username">Admin</span>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu extended logout">
                         <div class="log-arrow-up"></div>
-                        <li class="eborder-top">
-                            <a href="#"><i class="icon_profile"></i> My Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon_clock_alt"></i> Timeline</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon_chat_alt"></i> Chats</a>
-                        </li>
-                        <li>
-                            <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
-                        </li>
-                        <li>
-                            <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
-                        </li>
-                        <li>
-                            <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                                <i  class="icon_key_alt"></i>
+                                <p>
+                                    Logout
+                                </p>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -400,8 +393,13 @@
                         <span class="menu-arrow arrow_carrot-right"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="{{ route('cohort_first_text_show') }}">C updatetable</a></li>
-                        <li><a class="" href="{{ route('admin_cohort_infos_img_text_form') }}">C img & text upload</a></li>
+                        <li><a class="" href="{{ route('admin_cohort_text_insertform') }}">C text create </a></li>
+                        <li><a class="" href="{{ route('cohort_text_all') }}">C text pages </a></li>
+                        <li><a class="" href="{{ route('admin_cohort_group_create') }}">C group create </a></li>
+                        <li><a class="" href="{{ route('admin_cohort_group_show') }}">C group show </a></li>
+
+                        <!-- <li><a class="" href="{{ route('cohort_first_text_show') }}">C updatetable</a></li>
+                        <li><a class="" href="{{ route('admin_cohort_infos_img_text_form') }}">C img & text upload</a></li> -->
 {{--     <li><a class="" href="{{ route('admin_cohorts_img_and_text') }}">C img update</a></li>--}}
 
                     </ul>
@@ -427,6 +425,20 @@
                     <ul class="sub">
                         <li><a class="" href="{{route('admin_Alumni_Association')}}">AA updatetable</a></li>
                         <li><a class="" href="{{route('admin_Alumni_Association_image')}}">AA image</a></li>
+                    </ul>
+                    
+                  
+                </li>
+
+                 <li class="sub-menu">
+                    <a href="javascript:;" class="">
+
+                        <span>Footer</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a class="" href="{{route('admin_footer_update_form')}}">Footer update</a></li>
+                       
                     </ul>
                     
                   
@@ -512,6 +524,8 @@
 <script src="{{ asset('admin/js/sparklines.js') }}"></script>
 <script src="{{ asset('admin/js/charts.js') }}"></script>
 <script src="{{ asset('admin/js/jquery.slimscroll.min.js') }}"></script>
+
+
 <script>
     //knob
     $(function() {
@@ -557,6 +571,7 @@
         });
     });
 </script>
+
 
 </body>
 

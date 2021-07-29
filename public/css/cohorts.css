@@ -1,164 +1,35 @@
-.label{
+.cohort{
+	margin-top: 180px !important;
+}
 
-    width: 230px;
-    height: 75px;
-    left: 372px;
-    top: 347px;
-
-    font-family: Roboto;
-    font-style: normal;
+h3{
     font-weight: bold;
-    font-size: 64px;
-    line-height: 75px;
-    /* identical to box height */
-
-
-    color: #000000;
-}
-.label_text{
-    width: 1195px;
-    height: 164px;
-    padding-top: 50px;
-    padding-bottom: 130px;
-    left: 369px;
-    top: 459px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 26px;
-    color: #000000;
-}
-.all-cards{
-    position: initial;
-    margin-top: 217px;
-
-}
-.label_first{
-    width: 588px;
-    height: 42px;
-    left: 368px;
-    top: 714px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 42px;
-
-    color: #000000;
 }
 
-.label_second{
-    width: 588px;
-    height: 42px;
-    left: 368px;
-    top: 714px;
+h4{
+    color: #465072 !important;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 42px;
-
-    color: #000000;
 }
-.officers{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 42px;
+.cohort_group_second
+{
 
-    color: #465072;
+    background: #E5E5E5;
 
 }
 
-.card-title{
-    border-right: 2px solid #C4C4C4;
-    border-left:  2px solid #C4C4C4;
-    border-bottom:  2px solid #C4C4C4;
-    font-family: Roboto;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0em;
-    text-align: center;
-
+.card_img{
+  width:192px !important;
+    
 }
 
-.item_card{
-    width: 18%;
-}
-@media(max-width: 1712px){
-    .section_contact_text {
-        width: 100%;
-    }
-    .label{
-        font-size: 50px;
-    }
-}
-@media(max-width: 1046px){
-    .label-of {
-        margin-top: 135px;
-    }
-}
-@media(max-width: 768px){
-    .item_card{
-        width:500px;
-    }
-}
-@media (max-width: 1010px) {
-    .label-of1>h3{
+@media (max-width:768px){
+        .cohort_group{
+            justify-content:center !important
+        }
 
-        font-size: 26px;
-        line-height: 38px;
-    }
-    .label-of2>h3{
-
-        font-size: 26px;
-        line-height: 38px;
-    }
-    .label-of1>h4{
-
-        font-size: 26px;
-        line-height: 38px;
-    }
-    .label-of2>h4{
-
-        font-size: 26px;
-        line-height: 38px;
-    }
-    .label-of1 {
-        margin-top: 200px;
-    }
-    .label-of2 {
-        margin-top: 20px;
-    }
 }
-
-@media(max-width: 420px){
-    .item_card{
-        width: 100%;
-        padding: 60px;
-    }
-    .section_contact_text {
-        width: 100%;
-    }
-    .label-of1>h3{
-        width: 200px
-    }
-    .label-of2>h3{
-        width: 200px
-    }
-}
-
-@media (max-width: 320px){
-    .section_contact_text {
-        width: 100%;
-    }
-    .label-of>h3,h4{
-        width: 200px
-    }
+@media (max-width:426px){
+        .cohort_group{
+            justify-content: center!important
+           
 }

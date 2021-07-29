@@ -11,7 +11,17 @@ class Cohort extends Model
     protected $fillable=[
         'text_en',
         'text_am',
+        'data_one_am',
+        'data_one_en',
+        'data_two_am',
+        'data_two_en',
+        'title_one_am',
+        'title_one_en',
+        'title_two_am',
+        'title_two_ens',
+
     ];
+
     public function cohort_infos()
     {
         return $this->hasMany(Cohort_info::class);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Treyning;
 use App\Models\Title;
+use App\Models\Footer;
 
 class TrainingProgramController extends Controller
 {
@@ -23,8 +24,9 @@ class TrainingProgramController extends Controller
         
         $Title = Title::where('id','1001')->first();
 
+        $Footer = Footer::where('id','1000')->first();
 
-        return view('pages.training_program',compact('employees','Title'));
+        return view('pages.training_program',compact('employees','Title','Footer'));
     }
 
     /**

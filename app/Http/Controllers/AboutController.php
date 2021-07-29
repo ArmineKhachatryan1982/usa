@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\About_us;
+use App\Models\Footer;
 
 class AboutController extends Controller
 {
@@ -18,8 +19,10 @@ class AboutController extends Controller
 
         $data = About_us::where('id','1000')->first();
 
+          $Footer = Footer::where('id','1000')->first();
 
-        return view('pages.about',['data'=>$data]);
+
+        return view('pages.about',['data'=>$data,'Footer'=>$Footer]);
     }
 
     /**

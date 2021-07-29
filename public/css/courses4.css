@@ -159,52 +159,6 @@
     }
 
 }
-/* @media (max-width: 765px) {
-    .gradient_text {
-        font-size: 19px;
-        line-height: 32px;
-    }
-    .nkar_text {
-        flex-flow: column-reverse;
-
-        margin: auto;
-    }
-    .nkar_text>div{
-        margin: auto;
-    }
-    .text_image {
-        width: 400px;
-        font-size: 40px;
-    }
-    .image_size{
-        width: 460px;
-    }
-    .about_courseOneText{
-        font-size: 22px;
-        line-height: 25.13px;
-        padding: 55px;
-    }
-    .nkar_text>div{
-        margin:auto;
-        padding: 0;
-    }
-
-} */
-/* @media (max-width: 700px) {
-    .gradient_text {
-        font-size: 19px;
-        line-height: 32px;
-    }
-    .nkar_text {
-        flex-flow: column-reverse;
-
-        margin: auto;
-    }
-    .nkar_text>div{
-        margin: auto;
-    }
-
-} */
 
 @media (max-width: 540px) {
     #section_index {

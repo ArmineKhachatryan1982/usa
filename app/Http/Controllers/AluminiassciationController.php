@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Alumni_association;
 use App\Models\Alumni_association_img;
+use App\Models\Footer;
 class AluminiassciationController extends Controller
 {
     /**
@@ -20,7 +21,9 @@ class AluminiassciationController extends Controller
 
         $image = Alumni_association_img::where('alumni_associations_id','1000')->get();
 
-        return view('pages.alumni association',['data'=>$data,'image'=>$image]);
+        $Footer = Footer::where('id','1000')->first();
+
+        return view('pages.alumni association',['data'=>$data,'image'=>$image,'Footer'=>$Footer]);
     }
 
     /**

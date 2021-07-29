@@ -27,7 +27,7 @@
                     <td>{{ $items->title_text_am }}</td>
                     <td>{{ $items->title_text_en }}</td>
                     <td><a href="{{ asset('admin/admin_news_edit') }}/{{ $items->id }}" class="btn btn-info btn-sm float-left mr-1"><i class="fa fa-edit"></i></a>
-                    <a href="{{ asset('admin/admin_news_and_events_delete') }}/{{ $items->id }}" class="btn btn-danger btn-sm"><i class="fa fa-edit"></i></a></td>
+                    <a href="{{ asset('admin/admin_news_and_events_delete') }}/{{ $items->id }}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
                 </tr>
             @endforeach
             </tbody>

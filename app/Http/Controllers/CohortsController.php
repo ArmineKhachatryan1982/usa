@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Cohort;
-use App\Models\Cohort_info;
+use App\Models\Cohort_text;
+use App\Models\Cohort_group;
+use App\Models\Footer;
 use Illuminate\Support\Facades\DB;
 
 class CohortsController extends Controller
@@ -18,7 +19,14 @@ class CohortsController extends Controller
     {
         app()->setLocale($locale);
 
-        return view('pages.cohorts');
+        $text = Cohort_text::paginate(1);
+
+       $cohort_one = Cohort_group::All();
+
+        $Footer = Footer::where('id','1000')->first();
+      
+
+        return view('pages.cohorts',compact('text','cohort_one','Footer'));
     }
 
     /**

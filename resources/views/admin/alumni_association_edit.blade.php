@@ -50,6 +50,16 @@
                     </form>
                 </div>
             </section>
+            <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+             <script>    
+          
+                 CKEDITOR.replace('text_one_en')
+                 CKEDITOR.replace('text_one_am')
+                 CKEDITOR.replace('text_two_en')
+                 CKEDITOR.replace('text_two_am')
+                
+             </script>
+
 
 
 

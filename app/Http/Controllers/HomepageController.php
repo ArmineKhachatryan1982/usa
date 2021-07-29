@@ -6,6 +6,7 @@ use App\Models\News_and_event;
 use App\Models\Our_affiliates;
 use App\Models\Partners;
 use App\Models\Title;
+use App\Models\Footer;
 
 
 
@@ -13,11 +14,8 @@ use Illuminate\Http\Request;
 
 class HomepageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
+     
     public function index($locale)
     {
         app()->setLocale($locale);
@@ -32,7 +30,9 @@ class HomepageController extends Controller
 
         $Title = Title::where('id','1001')->first();
 
-        return view('pages.homepage',compact('about','News','Affiliates','Partners','Title'));
+        $Footer = Footer::where('id','1000')->first();
+
+        return view('pages.homepage',compact('about','News','Affiliates','Partners','Title','Footer'));
     }
 
     /**

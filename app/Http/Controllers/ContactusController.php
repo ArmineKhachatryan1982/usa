@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Contacts_us;
+use App\Models\Footer;
 
 use Illuminate\Http\Request;
 
@@ -16,7 +17,8 @@ class ContactusController extends Controller
     {
          app()->setLocale($locale);
         $data=Contacts_us::where('id','1')->first();
-        return view('pages.contactus',['data'=>$data]);
+        $Footer = Footer::where('id','1000')->first();
+        return view('pages.contactus',['data'=>$data,'Footer'=>$Footer]);
     }
 
     /**
@@ -37,7 +39,7 @@ class ContactusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Redirect()->back();
     }
 
     /**

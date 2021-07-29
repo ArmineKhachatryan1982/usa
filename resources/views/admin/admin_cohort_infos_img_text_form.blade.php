@@ -25,7 +25,7 @@
                     <form role="form" method="POST" action="{{ route('admin_cohort_infos_img_text_inserted') }}" enctype="multipart/form-data">
                         @csrf
 
-                        <input type="hidden"  name='cohort_infos_cohorts_id' value="{{ $cohort[0]->id }}">
+                        <!-- <input type="hidden"  name='cohort_infos_cohorts_id' value="{{ $cohort->id }}">  -->
                         <div class="form-group">
                             <label for="img_url">Image name</label>
                             <input type="file" class="form-control" id="img_url"  name="cohorts_info_img_url_file">
